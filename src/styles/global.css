@@ -249,14 +249,14 @@ a:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; bor
   transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease),
               border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
 }
-.btn-primary { background: var(--ink); color: #fff; }
+.btn-primary, .btn-primary:visited { background: var(--ink); color: #fff; }
 .btn-primary:hover { background: #2A2722; color: #fff; text-decoration-color: transparent; }
 .btn-primary:active { transform: translateY(1px); }
-.btn-secondary { background: var(--paper); color: var(--ink); border-color: var(--rule-strong); }
+.btn-secondary, .btn-secondary:visited { background: var(--paper); color: var(--ink); border-color: var(--rule-strong); }
 .btn-secondary:hover { background: var(--paper-2); color: var(--ink); }
-.btn-ember { background: var(--ember); color: #fff; }
+.btn-ember, .btn-ember:visited { background: var(--ember); color: #fff; }
 .btn-ember:hover { background: var(--ember-deep); color: #fff; }
-.btn-ghost { background: transparent; color: var(--ink); padding: 12px 6px; }
+.btn-ghost, .btn-ghost:visited { background: transparent; color: var(--ink); padding: 12px 6px; }
 .btn-ghost:hover { color: var(--ember); text-decoration-color: transparent; }
 .btn svg { width: 16px; height: 16px; stroke: currentColor; }
 .actions { display: flex; gap: var(--space-3); flex-wrap: wrap; }
