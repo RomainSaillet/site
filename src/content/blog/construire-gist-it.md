@@ -4,6 +4,7 @@ description: "J'ai passé quatre mois à coder une app de transcription. Je ne s
 date: 2025-03-01
 readTime: "10 min"
 category: "Tribune"
+tags: ["Tribunes"]
 cover: "tech"
 ---
 

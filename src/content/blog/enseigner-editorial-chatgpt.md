@@ -4,6 +4,7 @@ description: "Retour sur un semestre à Paris Panthéon-Assas. Ce que mes étudi
 date: 2025-06-01
 readTime: "6 min"
 category: "Cours"
+tags: ["Tribunes"]
 cover: "teach"
 ---
 

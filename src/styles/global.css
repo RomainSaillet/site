@@ -432,3 +432,25 @@ a:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; bor
   .article-card { grid-template-columns: 1fr; }
   .ac-cover { width: 100%; }
 }
+
+/* ---- Tag filters (blog) ---- */
+.tag-filter-bar { display: flex; gap: var(--space-2); margin-bottom: var(--space-6); flex-wrap: wrap; }
+.tag-filter {
+  font-family: var(--font-sans); font-size: 13px; font-weight: 500;
+  padding: 6px 16px; border-radius: 999px;
+  border: 1px solid var(--rule-strong);
+  background: transparent; color: var(--ink-muted);
+  cursor: pointer;
+  transition: color var(--dur-fast) var(--ease), background var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease);
+}
+.tag-filter:hover { color: var(--ink); border-color: var(--ink); }
+.tag-filter.active { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+/* ---- Article tags ---- */
+.ac-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: var(--space-2); }
+.ac-tag {
+  font-family: var(--font-sans); font-size: 11px; font-weight: 500;
+  padding: 3px 10px; border-radius: 999px;
+  background: var(--ember-tint); color: var(--ember-deep);
+  letter-spacing: 0.02em;
+}

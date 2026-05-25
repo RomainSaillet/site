@@ -4,6 +4,7 @@ description: "Une grammaire ne fait pas un récit. Un récit ne fait pas un livr
 date: 2025-11-01
 readTime: "12 min"
 category: "Tribune"
+tags: ["Tribunes"]
 cover: "storygami"
 ---
 

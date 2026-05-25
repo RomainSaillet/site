@@ -4,6 +4,8 @@ import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
 posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const ALL_TAGS = ['Tribunes', 'Actualité', 'Vidéos'];
 ---
 <Base
   title="Blog — Romain Saillet"
@@ -22,19 +24,57 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
   </section>
 
   <section class="container section" style="border-top:none;padding-top:0;">
-    {posts.map(post => (
-      <a class="article-card" href={`/blog/${post.slug}`}>
-        <div class={`ac-cover ${post.data.cover ?? ''}`}></div>
-        <div>
-          <div class="ac-meta">
-            {post.data.category}<span class="sep"></span>{post.data.readTime}<span class="sep"></span>
-            {post.data.date.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}
+
+    <div class="tag-filter-bar">
+      <button class="tag-filter active" data-filter="all">Tout</button>
+      {ALL_TAGS.map(tag => (
+        <button class="tag-filter" data-filter={tag}>{tag}</button>
+      ))}
+    </div>
+
+    <div id="article-list">
+      {posts.map(post => (
+        <a
+          class="article-card"
+          href={`/blog/${post.slug}`}
+          data-tags={(post.data.tags ?? []).join(',')}
+        >
+          <div class={`ac-cover ${post.data.cover ?? ''}`}></div>
+          <div>
+            {post.data.tags && post.data.tags.length > 0 && (
+              <div class="ac-tags">
+                {post.data.tags.map(tag => <span class="ac-tag">{tag}</span>)}
+              </div>
+            )}
+            <div class="ac-meta">
+              {post.data.category}<span class="sep"></span>{post.data.readTime}<span class="sep"></span>
+              {post.data.date.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}
+            </div>
+            <h3 class="ac-title">{post.data.title}</h3>
+            <p class="ac-dek">{post.data.description}</p>
           </div>
-          <h3 class="ac-title">{post.data.title}</h3>
-          <p class="ac-dek">{post.data.description}</p>
-        </div>
-      </a>
-    ))}
+        </a>
+      ))}
+    </div>
+
   </section>
 
 </Base>
+
+<script>
+  const btns  = document.querySelectorAll('.tag-filter');
+  const cards = document.querySelectorAll('#article-list .article-card');
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      cards.forEach(card => {
+        const tags = (card.dataset.tags || '').split(',').filter(Boolean);
+        const show = filter === 'all' || tags.includes(filter);
+        card.style.display = show ? '' : 'none';
+      });
+    });
+  });
+</script>

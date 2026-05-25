@@ -4,6 +4,7 @@ description: "Le mot « nouveau » est usé jusqu'à la corde. Ce qui change vra
 date: 2025-09-01
 readTime: "8 min"
 category: "Tribune"
+tags: ["Tribunes"]
 cover: "tedx"
 ---
 

@@ -4,6 +4,7 @@ description: "Une méthode qui survit à son époque n'est pas une méthode rigi
 date: 2025-01-01
 readTime: "7 min"
 category: "Méthode"
+tags: ["Tribunes"]
 cover: "storygami"
 ---
 
