@@ -682,7 +682,6 @@ a.offre-card:hover .offre-card-title { color: var(--ember); }
   color: var(--ink-muted);
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
-  margin-left: var(--space-4);
   flex-shrink: 0;
   transition: color var(--dur-fast) var(--ease),
               border-color var(--dur-fast) var(--ease),
@@ -697,3 +696,27 @@ a.offre-card:hover .offre-card-title { color: var(--ember); }
 /* Affichage conditionnel des icônes */
 :root:not([data-theme="dark"]) .icon-moon { display: none; }
 [data-theme="dark"] .icon-sun  { display: none; }
+/* ---- Header right group ---- */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* ---- Bouton Contact nav ---- */
+.nav-contact-btn {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 7px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: var(--radius);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.nav-contact-btn:hover,
+.nav-contact-btn:visited { color: var(--paper); text-decoration: none; }
+.nav-contact-btn:hover { background: var(--ember); }
