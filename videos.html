@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vidéos — Romain Saillet</title>
+<meta name="description" content="TEDx Talk et vidéos YouTube de Romain Saillet sur le storytelling, les médias et la transformation narrative par la technologie.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container inner">
+    <a class="brand" href="index.html">Romain Saillet<span class="dot">.</span></a>
+    <nav class="site-nav">
+      <a href="index.html">Accueil</a>
+      <a href="storygami.html">Storygami</a>
+      <a href="gistit.html">Gist It</a>
+      <a href="videos.html" class="active">Vidéos</a>
+      <a href="tribunes.html">Tribunes</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="container hero">
+    <div class="section-eyebrow">Vidéos</div>
+    <h1 style="max-width:18ch;">Des histoires sur l'écran, pas seulement dans les mots.</h1>
+    <p class="standfirst">
+      Une conférence TEDx, et une chaîne YouTube où j'explore ce que les nouveaux médias
+      font aux récits — et aux gens qui les reçoivent.
+    </p>
+  </section>
+
+  <section class="container section" style="border-top:none;padding-top:0;">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">À la une</div>
+        <h2 class="section-title">TEDx Talk</h2>
+      </div>
+    </div>
+
+    <div style="max-width:680px;">
+      <div class="video-card">
+        <a class="video-thumb" href="#" target="_blank" rel="noopener">
+          <div class="play-btn">
+            <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <span class="label">TEDx</span>
+        </a>
+        <h3 class="video-title">Pourquoi les meilleures histoires n'ont pas besoin d'être vraies</h3>
+        <p class="video-meta">TEDx Talk · 2013 · 18 min</p>
+        <p style="font-family:var(--font-serif);font-size:17px;line-height:1.6;color:var(--ink-muted);margin:0;">
+          Une conférence sur ce qui sépare un récit efficace d'une communication correcte.
+          Donnée devant 400 personnes. Ce que j'y dis reste vrai — j'en suis encore surpris.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">YouTube</div>
+        <h2 class="section-title">La chaîne</h2>
+      </div>
+      <a class="section-link" href="#" target="_blank" rel="noopener">Voir la chaîne ↗</a>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
+      <div class="video-card">
+        <a class="video-thumb" href="#" target="_blank" rel="noopener">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <span class="label">YouTube</span>
+        </a>
+        <h3 class="video-title" style="font-size:18px;">Le storytelling n'est pas une technique</h3>
+        <p class="video-meta">24 min · 2022</p>
+      </div>
+      <div class="video-card">
+        <a class="video-thumb" href="#" target="_blank" rel="noopener">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <span class="label">YouTube</span>
+        </a>
+        <h3 class="video-title" style="font-size:18px;">Ce que les réseaux ont fait au sens</h3>
+        <p class="video-meta">31 min · 2021</p>
+      </div>
+      <div class="video-card">
+        <a class="video-thumb" href="#" target="_blank" rel="noopener">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg></div>
+          <span class="label">YouTube</span>
+        </a>
+        <h3 class="video-title" style="font-size:18px;">L'audience n'existe pas. Il y a des gens.</h3>
+        <p class="video-meta">19 min · 2020</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <blockquote class="pullquote" style="max-width:34rem;">
+      « Ce que la caméra change à la parole, ce n'est pas le mot — c'est le silence entre les mots. »
+      <cite>YouTube — 2021</cite>
+    </blockquote>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container inner">
+    <div>
+      <div class="brand" style="font-size:22px;">Romain Saillet<span class="dot">.</span></div>
+      <div class="blurb">Éditorial, enseignement, et un peu de code. Paris, à pied entre deux trains.</div>
+      <div class="copy">© 2026 · Romain Saillet</div>
+    </div>
+    <div class="links">
+      <a href="mailto:romain@romainsaillet.com">romain@romainsaillet.com</a>
+      <a href="#">YouTube ↗</a>
+      <a href="#">LinkedIn ↗</a>
+      <a href="#">RSS</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const h = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => h.classList.toggle('scrolled', window.scrollY > 8), {passive:true});
+</script>
+</body>
+</html>

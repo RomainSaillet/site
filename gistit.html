@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gist It — Romain Saillet</title>
+<meta name="description" content="Gist It : une app macOS pour transcrire vos réunions localement, sans cloud. 100% privé, optimisé Apple Silicon.">
+<link rel="stylesheet" href="style.css">
+<style>
+.gistit-screen{display:flex;min-height:340px;font-family:var(--font-sans);}
+.gistit-side{width:210px;background:var(--paper-2);border-right:1px solid var(--rule);padding:16px 12px;display:flex;flex-direction:column;gap:4px;}
+.gistit-side .title{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-muted);padding:0 8px 8px;}
+.gistit-item{display:flex;flex-direction:column;gap:2px;padding:8px 10px;border-radius:6px;cursor:default;}
+.gistit-item .h{font-size:13px;font-weight:500;color:var(--ink);}
+.gistit-item .s{font-size:11px;color:var(--ink-muted);}
+.gistit-item.active{background:var(--paper);border:1px solid var(--rule);}
+.gistit-main{flex:1;padding:22px 26px;display:flex;flex-direction:column;gap:12px;overflow:hidden;}
+.gistit-meta{font-size:12px;color:var(--ink-muted);display:flex;gap:12px;}
+.gistit-h1{font-family:var(--font-serif);font-size:20px;font-weight:500;margin:0;color:var(--ink);}
+.gistit-trans{font-family:var(--font-serif);font-size:14px;line-height:1.7;color:var(--ink);flex:1;}
+.gistit-trans .ts{font-family:var(--font-mono);font-size:10px;color:var(--ink-muted);margin-right:8px;}
+.gistit-trans p{margin:0 0 10px;}
+.gistit-controls{display:flex;align-items:center;gap:10px;padding-top:10px;border-top:1px solid var(--rule);}
+.pill{font-size:12px;padding:4px 10px;border-radius:999px;background:var(--paper-2);color:var(--ink-muted);font-family:var(--font-sans);}
+.pill.rec{background:var(--ember-tint);color:var(--ember-deep);display:inline-flex;align-items:center;gap:5px;}
+.pill.rec::before{content:"";width:6px;height:6px;border-radius:999px;background:var(--ember);}
+.waveform{flex:1;display:flex;align-items:center;gap:2px;height:20px;}
+.waveform span{display:block;width:2px;background:var(--ink-muted);border-radius:2px;}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container inner">
+    <a class="brand" href="index.html">Romain Saillet<span class="dot">.</span></a>
+    <nav class="site-nav">
+      <a href="index.html">Accueil</a>
+      <a href="storygami.html">Storygami</a>
+      <a href="gistit.html" class="active">Gist It</a>
+      <a href="videos.html">Vidéos</a>
+      <a href="tribunes.html">Tribunes</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="container hero">
+    <div class="section-eyebrow">App macOS</div>
+    <h1 style="max-width:20ch;">Gist It — transcrire pour ne plus jamais réécouter.</h1>
+    <p class="standfirst">
+      Une petite app macOS que j'ai construite pour mon usage quotidien :
+      un raccourci, on parle, on récupère un texte propre. Pensée pour les journalistes,
+      les chercheurs, et les paresseux méthodiques.
+    </p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#download">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v14m0 0-5-5m5 5 5-5M4 21h16"/></svg>
+        Télécharger pour macOS
+      </a>
+      <a class="btn btn-ghost" href="#privacy">Politique de confidentialité</a>
+    </div>
+  </section>
+
+  <section class="container section" style="border-top:none;padding-top:0;">
+    <div class="app-window">
+      <div class="app-titlebar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <div class="title">Gist It — Entretien Storygami #04</div>
+      </div>
+      <div class="gistit-screen">
+        <aside class="gistit-side">
+          <div class="title">Récents</div>
+          <div class="gistit-item active">
+            <span class="h">Entretien Storygami #04</span>
+            <span class="s">il y a 6 min · 14:32</span>
+          </div>
+          <div class="gistit-item">
+            <span class="h">Cours IA — séance 7</span>
+            <span class="s">hier · 1h08</span>
+          </div>
+          <div class="gistit-item">
+            <span class="h">Note vocale — pitch</span>
+            <span class="s">3 jours · 02:14</span>
+          </div>
+          <div class="gistit-item">
+            <span class="h">Réunion Mantu — Q4</span>
+            <span class="s">7 jours · 42:11</span>
+          </div>
+        </aside>
+        <div class="gistit-main">
+          <h1 class="gistit-h1">Entretien Storygami #04</h1>
+          <div class="gistit-meta">
+            <span>Aujourd'hui · 11:32</span>
+            <span>Français</span>
+            <span>14 min 32 s</span>
+          </div>
+          <div class="gistit-trans">
+            <p><span class="ts">00:14</span>Ce qui me frappe, c'est que la méthode est devenue lisible pour eux assez vite. Plus vite que pour mes clients d'agence, en tout cas.</p>
+            <p><span class="ts">00:41</span>Ils ne demandent pas « pourquoi six plis ». Ils demandent « lequel on plie en premier ». C'est une différence de génération, je crois.</p>
+            <p><span class="ts">01:08</span>Et puis il y a cette idée que le canvas n'est pas un livrable. C'est un outil d'enquête sur soi-même, d'abord.</p>
+          </div>
+          <div class="gistit-controls">
+            <span class="pill rec">Enregistrement</span>
+            <div class="waveform" aria-hidden="true">
+              <span style="height:6px"></span><span style="height:14px"></span><span style="height:10px"></span><span style="height:18px"></span><span style="height:8px"></span><span style="height:16px"></span><span style="height:12px"></span><span style="height:20px"></span><span style="height:8px"></span><span style="height:14px"></span><span style="height:18px"></span><span style="height:6px"></span><span style="height:12px"></span><span style="height:20px"></span><span style="height:9px"></span><span style="height:15px"></span><span style="height:11px"></span><span style="height:7px"></span><span style="height:17px"></span><span style="height:13px"></span>
+            </div>
+            <span class="pill">⌃⌘ G</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container editorial-statement">
+    <div class="grid">
+      <div class="num">0%<small>de vos données dans le cloud</small></div>
+      <p class="copy">Tout reste sur votre Mac. Pas de compte, pas de cloud, pas d'historique côté serveur. <em>Local. Toujours.</em></p>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">Pourquoi je l'ai fait</div>
+        <h2 class="section-title">Trois choses, dans cet ordre</h2>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+      <div>
+        <div style="font-family:var(--font-serif);font-size:48px;line-height:1;color:var(--ember);margin-bottom:8px;">01</div>
+        <h3 style="font-family:var(--font-serif);font-size:20px;font-weight:500;margin:0 0 8px;">J'avais besoin de l'outil.</h3>
+        <p style="font-family:var(--font-serif);font-size:16px;line-height:1.5;color:var(--ink-muted);margin:0;">Quinze entretiens par mois, et plus jamais le courage de les réécouter. Il fallait un raccourci.</p>
+      </div>
+      <div>
+        <div style="font-family:var(--font-serif);font-size:48px;line-height:1;color:var(--ember);margin-bottom:8px;">02</div>
+        <h3 style="font-family:var(--font-serif);font-size:20px;font-weight:500;margin:0 0 8px;">Je voulais comprendre.</h3>
+        <p style="font-family:var(--font-serif);font-size:16px;line-height:1.5;color:var(--ink-muted);margin:0;">Construire avec l'IA, pas en parler. Apprendre par les mains ce que je vais devoir enseigner.</p>
+      </div>
+      <div>
+        <div style="font-family:var(--font-serif);font-size:48px;line-height:1;color:var(--ember);margin-bottom:8px;">03</div>
+        <h3 style="font-family:var(--font-serif);font-size:20px;font-weight:500;margin:0 0 8px;">Rien ne sort de la machine.</h3>
+        <p style="font-family:var(--font-serif);font-size:16px;line-height:1.5;color:var(--ink-muted);margin:0;">Transcription locale, sur l'appareil. Pas de cloud, pas de compte, pas d'historique côté serveur.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section" id="privacy">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">Privacy policy</div>
+        <h2 class="section-title">Ce que Gist It fait, et ce qu'il ne fait pas</h2>
+      </div>
+    </div>
+    <div class="reading" style="margin:0;">
+      <div class="privacy">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4F5E48" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin-top:2px;flex-shrink:0;"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 1 1 8 0v4"/></svg>
+        <div>
+          <div class="ph">Tout reste sur votre Mac.</div>
+          <div class="pp">La transcription est calculée localement par un modèle qui tourne sur votre machine. Aucun audio, aucun texte n'est envoyé sur un serveur. Aucun compte n'est requis pour utiliser l'application.</div>
+        </div>
+      </div>
+      <p style="font-family:var(--font-serif);font-size:17px;line-height:1.7;margin-top:24px;">
+        Gist It ne collecte aucune donnée d'usage, aucune statistique anonyme, aucun
+        identifiant. Il ne se connecte à internet que pour vérifier les mises à jour,
+        et uniquement quand vous le lui demandez. Les fichiers d'enregistrement
+        restent dans le dossier que vous avez choisi ; les supprimer suffit à les
+        faire disparaître.
+      </p>
+      <p style="font-family:var(--font-serif);font-size:17px;line-height:1.7;">
+        Gist It n'utilise pas de services tiers pour la transcription. Tous les modèles
+        d'intelligence artificielle fonctionnent directement sur votre Mac, sans transmission
+        vers des serveurs externes. Vos conversations, réunions et notes vocales
+        ne quittent jamais votre appareil.
+      </p>
+      <p style="font-family:var(--font-serif);font-size:17px;line-height:1.7;">
+        Pour les questions plus précises, écrivez à
+        <a href="mailto:gistit@romainsaillet.com">gistit@romainsaillet.com</a>.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container inner">
+    <div>
+      <div class="brand" style="font-size:22px;">Romain Saillet<span class="dot">.</span></div>
+      <div class="blurb">Éditorial, enseignement, et un peu de code. Paris, à pied entre deux trains.</div>
+      <div class="copy">© 2026 · Romain Saillet</div>
+    </div>
+    <div class="links">
+      <a href="mailto:romain@romainsaillet.com">romain@romainsaillet.com</a>
+      <a href="#">YouTube ↗</a>
+      <a href="#">LinkedIn ↗</a>
+      <a href="#">RSS</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const h = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => h.classList.toggle('scrolled', window.scrollY > 8), {passive:true});
+</script>
+</body>
+</html>
