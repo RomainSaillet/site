@@ -629,3 +629,71 @@ a.offre-card:hover .offre-card-title { color: var(--ember); }
 @media (max-width: 640px) {
   .offre-detail-block { padding: var(--space-3) var(--space-4); }
 }
+
+/* ================================================================
+   MODE SOMBRE
+   ================================================================ */
+
+/* Palette dark — warm, éditorial */
+[data-theme="dark"] {
+  --paper:        #18160F;
+  --paper-2:      #211E17;
+  --paper-3:      #2A2720;
+  --ink:          #EDE8DF;
+  --ink-muted:    #9B9285;
+  --ink-faint:    #5C5750;
+  --rule:         #302C24;
+  --rule-strong:  #3F3B32;
+  --ember:        #C96848;
+  --ember-deep:   #E08060;
+  --ember-tint:   #2C1A10;
+  --sage:         #6B7D63;
+  --sage-tint:    #1A2318;
+  --focus-ring:   #C96848;
+  --shadow-lift:  0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.4);
+  --shadow-menu:  0 1px 2px rgb(0 0 0 / 0.4), 0 12px 32px rgb(0 0 0 / 0.5);
+}
+
+/* Header blur en mode sombre */
+[data-theme="dark"] .site-header.scrolled {
+  background: rgb(24 22 15 / 0.88);
+}
+
+/* Sélection de texte */
+[data-theme="dark"] ::selection {
+  background: var(--ember);
+  color: #fff;
+}
+
+/* Liens visités en mode sombre */
+[data-theme="dark"] a:visited { color: var(--ink); }
+
+/* Couleur des couverts d'articles en mode sombre */
+[data-theme="dark"] .ac-cover {
+  background: linear-gradient(135deg, #2A2520, #3A3028);
+}
+
+/* Bouton toggle ─────────────────────────────────────────────── */
+.theme-toggle {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--rule-strong);
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  margin-left: var(--space-4);
+  flex-shrink: 0;
+  transition: color var(--dur-fast) var(--ease),
+              border-color var(--dur-fast) var(--ease),
+              background var(--dur-fast) var(--ease);
+}
+.theme-toggle:hover {
+  color: var(--ink);
+  border-color: var(--rule-strong);
+  background: var(--paper-2);
+}
+
+/* Affichage conditionnel des icônes */
+:root:not([data-theme="dark"]) .icon-moon { display: none; }
+[data-theme="dark"] .icon-sun  { display: none; }
