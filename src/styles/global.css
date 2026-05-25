@@ -454,3 +454,73 @@ a:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; bor
   background: var(--ember-tint); color: var(--ember-deep);
   letter-spacing: 0.02em;
 }
+
+/* ---- Offre éditoriale ---- */
+.offre-level-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-7);
+  align-items: start;
+  margin-bottom: var(--space-7);
+}
+.offre-num {
+  font-family: var(--font-serif);
+  font-size: 96px;
+  line-height: 0.9;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: var(--ember);
+  margin-top: 4px;
+}
+.offre-level-dek {
+  font-family: var(--font-serif);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin: var(--space-3) 0 0;
+  max-width: 44ch;
+}
+.offre-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+.offre-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--dur-fast) var(--ease);
+}
+.offre-card:hover { border-color: var(--rule-strong); }
+.offre-card-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ember);
+}
+.offre-card-title {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0;
+}
+.offre-card-dek {
+  font-family: var(--font-serif);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin: 0;
+  flex: 1;
+}
+@media (max-width: 640px) {
+  .offre-grid { grid-template-columns: 1fr; }
+  .offre-level-head { grid-template-columns: 1fr; gap: var(--space-3); }
+  .offre-num { font-size: 64px; }
+}
