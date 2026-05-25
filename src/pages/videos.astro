@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vidéos — Romain Saillet</title>
-<meta name="description" content="TEDx Talk et vidéos YouTube de Romain Saillet sur le storytelling, les médias et la transformation narrative par la technologie.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="site-header" id="siteHeader">
-  <div class="container inner">
-    <a class="brand" href="index.html">Romain Saillet<span class="dot">.</span></a>
-    <nav class="site-nav">
-      <a href="index.html">Accueil</a>
-      <a href="storygami.html">Storygami</a>
-      <a href="gistit.html">Gist It</a>
-      <a href="videos.html" class="active">Vidéos</a>
-      <a href="tribunes.html">Tribunes</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Vidéos — Romain Saillet"
+  description="TEDx Talk et vidéos YouTube de Romain Saillet sur le storytelling, les médias et la transformation narrative par la technologie."
+  activeNav="videos"
+>
 
   <section class="container hero">
     <div class="section-eyebrow">Vidéos</div>
@@ -41,7 +23,6 @@
         <h2 class="section-title">TEDx Talk</h2>
       </div>
     </div>
-
     <div style="max-width:680px;">
       <div class="video-card">
         <a class="video-thumb" href="#" target="_blank" rel="noopener">
@@ -68,7 +49,6 @@
       </div>
       <a class="section-link" href="#" target="_blank" rel="noopener">Voir la chaîne ↗</a>
     </div>
-
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;">
       <div class="video-card">
         <a class="video-thumb" href="#" target="_blank" rel="noopener">
@@ -104,27 +84,4 @@
     </blockquote>
   </section>
 
-</main>
-
-<footer class="site-footer">
-  <div class="container inner">
-    <div>
-      <div class="brand" style="font-size:22px;">Romain Saillet<span class="dot">.</span></div>
-      <div class="blurb">Éditorial, enseignement, et un peu de code. Paris, à pied entre deux trains.</div>
-      <div class="copy">© 2026 · Romain Saillet</div>
-    </div>
-    <div class="links">
-      <a href="mailto:romain@romainsaillet.com">romain@romainsaillet.com</a>
-      <a href="#">YouTube ↗</a>
-      <a href="#">LinkedIn ↗</a>
-      <a href="#">RSS</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const h = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => h.classList.toggle('scrolled', window.scrollY > 8), {passive:true});
-</script>
-</body>
-</html>
+</Base>

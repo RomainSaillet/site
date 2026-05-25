@@ -1,0 +1,59 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  activeNav?: string;
+}
+const { title, description = "Expert en création éditoriale et nouveaux médias.", activeNav } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+{description && <meta name="description" content={description} />}
+<link rel="stylesheet" href="/styles/global.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="container inner">
+    <a class="brand" href="/">Romain Saillet<span class="dot">.</span></a>
+    <nav class="site-nav">
+      <a href="/" class={activeNav === 'accueil' ? 'active' : undefined}>Accueil</a>
+      <a href="/storygami" class={activeNav === 'storygami' ? 'active' : undefined}>Storygami</a>
+      <a href="/gistit" class={activeNav === 'gistit' ? 'active' : undefined}>Gist It</a>
+      <a href="/videos" class={activeNav === 'videos' ? 'active' : undefined}>Vidéos</a>
+      <a href="/blog" class={activeNav === 'blog' ? 'active' : undefined}>Blog</a>
+      <a href="/contact" class={activeNav === 'contact' ? 'active' : undefined}>Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <slot />
+</main>
+
+<footer class="site-footer">
+  <div class="container inner">
+    <div>
+      <div class="brand" style="font-size:22px;">Romain Saillet<span class="dot">.</span></div>
+      <div class="blurb">Éditorial, enseignement, et un peu de code. Paris, à pied entre deux trains.</div>
+      <div class="copy">© 2026 · Romain Saillet</div>
+    </div>
+    <div class="links">
+      <a href="mailto:romain@romainsaillet.com">romain@romainsaillet.com</a>
+      <a href="#">YouTube ↗</a>
+      <a href="#">LinkedIn ↗</a>
+      <a href="#">RSS</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const h = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => h.classList.toggle('scrolled', window.scrollY > 8), {passive:true});
+</script>
+</body>
+</html>

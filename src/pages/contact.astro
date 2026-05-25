@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact — Romain Saillet</title>
-<meta name="description" content="Écrire à Romain Saillet pour un atelier Storygami, un projet éditorial, ou une collaboration.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="site-header" id="siteHeader">
-  <div class="container inner">
-    <a class="brand" href="index.html">Romain Saillet<span class="dot">.</span></a>
-    <nav class="site-nav">
-      <a href="index.html">Accueil</a>
-      <a href="storygami.html">Storygami</a>
-      <a href="gistit.html">Gist It</a>
-      <a href="videos.html">Vidéos</a>
-      <a href="tribunes.html">Tribunes</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Contact — Romain Saillet"
+  description="Écrire à Romain Saillet pour un atelier Storygami, un projet éditorial, ou une collaboration."
+  activeNav="contact"
+>
 
   <section class="container hero">
     <div class="section-eyebrow">Contact</div>
@@ -37,7 +19,6 @@
 
   <section class="container section" style="border-top:none;padding-top:0;">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:start;">
-
       <div>
         <form class="contact-form" onsubmit="return false;">
           <div class="field">
@@ -61,7 +42,6 @@
           </div>
         </form>
       </div>
-
       <div>
         <div style="padding-top:var(--space-2);">
           <h3 style="font-family:var(--font-serif);font-size:22px;font-weight:500;margin:0 0 var(--space-4);">Ce pour quoi on m'écrit le plus souvent</h3>
@@ -85,31 +65,7 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
-</main>
-
-<footer class="site-footer">
-  <div class="container inner">
-    <div>
-      <div class="brand" style="font-size:22px;">Romain Saillet<span class="dot">.</span></div>
-      <div class="blurb">Éditorial, enseignement, et un peu de code. Paris, à pied entre deux trains.</div>
-      <div class="copy">© 2026 · Romain Saillet</div>
-    </div>
-    <div class="links">
-      <a href="mailto:romain@romainsaillet.com">romain@romainsaillet.com</a>
-      <a href="#">YouTube ↗</a>
-      <a href="#">LinkedIn ↗</a>
-      <a href="#">RSS</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const h = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => h.classList.toggle('scrolled', window.scrollY > 8), {passive:true});
-</script>
-</body>
-</html>
+</Base>

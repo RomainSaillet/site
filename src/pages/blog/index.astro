@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+<Base
+  title="Blog — Romain Saillet"
+  description="Articles de fond sur l'éditorial, les médias et la transformation narrative par la technologie."
+  activeNav="blog"
+>
+
+  <section class="container hero">
+    <div class="section-eyebrow">Blog</div>
+    <h1 style="max-width:20ch;">Ce que j'écris quand je ne peux pas m'en empêcher.</h1>
+    <p class="standfirst">
+      Des articles de fond sur l'éditorial, les médias, et ce que la technologie
+      change à la façon dont on raconte et dont on reçoit les histoires.
+      Pas de calendrier éditorial. Seulement quand ça vaut le détour.
+    </p>
+  </section>
+
+  <section class="container section" style="border-top:none;padding-top:0;">
+    {posts.map(post => (
+      <a class="article-card" href={`/blog/${post.slug}`}>
+        <div class={`ac-cover ${post.data.cover ?? ''}`}></div>
+        <div>
+          <div class="ac-meta">
+            {post.data.category}<span class="sep"></span>{post.data.readTime}<span class="sep"></span>
+            {post.data.date.toLocaleDateString('fr-FR', { month: 'long', year: 'numeric' })}
+          </div>
+          <h3 class="ac-title">{post.data.title}</h3>
+          <p class="ac-dek">{post.data.description}</p>
+        </div>
+      </a>
+    ))}
+  </section>
+
+</Base>

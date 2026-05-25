@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Romain Saillet — Éditorial, enseignement, et un peu de code.</title>
-<meta name="description" content="Expert en création éditoriale et nouveaux médias. Directeur Conseil Éditorial chez Mantu, enseignant à Paris Panthéon-Assas, créateur de Storygami et Gist It.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="site-header" id="siteHeader">
-  <div class="container inner">
-    <a class="brand" href="index.html">Romain Saillet<span class="dot">.</span></a>
-    <nav class="site-nav">
-      <a href="index.html" class="active">Accueil</a>
-      <a href="storygami.html">Storygami</a>
-      <a href="gistit.html">Gist It</a>
-      <a href="videos.html">Vidéos</a>
-      <a href="tribunes.html">Tribunes</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Romain Saillet — Éditorial, enseignement, et un peu de code."
+  description="Expert en création éditoriale et nouveaux médias. Directeur Conseil Éditorial chez Mantu, enseignant à Paris Panthéon-Assas, créateur de Storygami et Gist It."
+  activeNav="accueil"
+>
 
   <section class="container hero-mag">
     <div>
@@ -35,8 +17,8 @@
         Problem solver avant tout.
       </p>
       <div class="actions">
-        <a class="btn btn-primary" href="storygami.html">Découvrir Storygami →</a>
-        <a class="btn btn-ghost" href="tribunes.html">Lire les tribunes</a>
+        <a class="btn btn-primary" href="/storygami">Découvrir Storygami →</a>
+        <a class="btn btn-ghost" href="/blog">Lire le blog</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -62,19 +44,19 @@
       </div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
-      <a class="project-card" href="storygami.html">
+      <a class="project-card" href="/storygami">
         <span class="tag tag-tool" style="align-self:flex-start;">Méthode</span>
         <h3 class="pc-title">Storygami</h3>
         <p class="pc-dek">Une méthodologie de stratégie éditoriale en six plis. Le canvas que j'utilise depuis douze ans pour structurer un récit de marque sans le rigidifier.</p>
         <span class="pc-foot">Voir la méthode →</span>
       </a>
-      <a class="project-card" href="gistit.html">
+      <a class="project-card" href="/gistit">
         <span class="tag tag-tool" style="align-self:flex-start;">Outil</span>
         <h3 class="pc-title">Gist It</h3>
         <p class="pc-dek">Une petite app macOS pour transcrire ce qu'on entend. Pensée pour les journalistes, les chercheurs et les paresseux méthodiques.</p>
         <span class="pc-foot">Découvrir l'app →</span>
       </a>
-      <a class="project-card" href="videos.html">
+      <a class="project-card" href="/videos">
         <span class="tag tag-video" style="align-self:flex-start;">Conférences</span>
         <h3 class="pc-title">TEDx &amp; vidéos</h3>
         <p class="pc-dek">Une conférence TEDx, et une chaîne YouTube où je parle de récit, de médias, et de ce que les machines y changent — pour de vrai.</p>
@@ -93,13 +75,13 @@
   <section class="container section" style="border-top:none;padding-top:0;">
     <div class="section-head">
       <div>
-        <div class="section-eyebrow">Dernières tribunes</div>
+        <div class="section-eyebrow">Derniers articles</div>
         <h2 class="section-title">Ce que j'ai écrit récemment</h2>
       </div>
-      <a class="section-link" href="tribunes.html">Toutes les tribunes →</a>
+      <a class="section-link" href="/blog">Tous les articles →</a>
     </div>
 
-    <a class="article-card" href="tribunes.html">
+    <a class="article-card" href="/blog/ia-ecrira-pas-votre-livre">
       <div class="ac-cover storygami"></div>
       <div>
         <div class="ac-meta">Tribune<span class="sep"></span>12 min<span class="sep"></span>novembre 2025</div>
@@ -108,7 +90,7 @@
       </div>
     </a>
 
-    <a class="article-card" href="tribunes.html">
+    <a class="article-card" href="/blog/nouveaux-medias-nouveaux-recits">
       <div class="ac-cover tedx"></div>
       <div>
         <div class="ac-meta">Tribune<span class="sep"></span>8 min<span class="sep"></span>septembre 2025</div>
@@ -117,7 +99,7 @@
       </div>
     </a>
 
-    <a class="article-card" href="tribunes.html">
+    <a class="article-card" href="/blog/enseigner-editorial-chatgpt">
       <div class="ac-cover teach"></div>
       <div>
         <div class="ac-meta">Cours<span class="sep"></span>6 min<span class="sep"></span>juin 2025</div>
@@ -134,27 +116,4 @@
     </blockquote>
   </section>
 
-</main>
-
-<footer class="site-footer">
-  <div class="container inner">
-    <div>
-      <div class="brand" style="font-size:22px;">Romain Saillet<span class="dot">.</span></div>
-      <div class="blurb">Éditorial, enseignement, et un peu de code. Paris, à pied entre deux trains.</div>
-      <div class="copy">© 2026 · Romain Saillet</div>
-    </div>
-    <div class="links">
-      <a href="mailto:romain@romainsaillet.com">romain@romainsaillet.com</a>
-      <a href="#">YouTube ↗</a>
-      <a href="#">LinkedIn ↗</a>
-      <a href="#">RSS</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const h = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => h.classList.toggle('scrolled', window.scrollY > 8), {passive:true});
-</script>
-</body>
-</html>
+</Base>

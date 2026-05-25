@@ -1,50 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gist It — Romain Saillet</title>
-<meta name="description" content="Gist It : une app macOS pour transcrire vos réunions localement, sans cloud. 100% privé, optimisé Apple Silicon.">
-<link rel="stylesheet" href="style.css">
-<style>
-.gistit-screen{display:flex;min-height:340px;font-family:var(--font-sans);}
-.gistit-side{width:210px;background:var(--paper-2);border-right:1px solid var(--rule);padding:16px 12px;display:flex;flex-direction:column;gap:4px;}
-.gistit-side .title{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-muted);padding:0 8px 8px;}
-.gistit-item{display:flex;flex-direction:column;gap:2px;padding:8px 10px;border-radius:6px;cursor:default;}
-.gistit-item .h{font-size:13px;font-weight:500;color:var(--ink);}
-.gistit-item .s{font-size:11px;color:var(--ink-muted);}
-.gistit-item.active{background:var(--paper);border:1px solid var(--rule);}
-.gistit-main{flex:1;padding:22px 26px;display:flex;flex-direction:column;gap:12px;overflow:hidden;}
-.gistit-meta{font-size:12px;color:var(--ink-muted);display:flex;gap:12px;}
-.gistit-h1{font-family:var(--font-serif);font-size:20px;font-weight:500;margin:0;color:var(--ink);}
-.gistit-trans{font-family:var(--font-serif);font-size:14px;line-height:1.7;color:var(--ink);flex:1;}
-.gistit-trans .ts{font-family:var(--font-mono);font-size:10px;color:var(--ink-muted);margin-right:8px;}
-.gistit-trans p{margin:0 0 10px;}
-.gistit-controls{display:flex;align-items:center;gap:10px;padding-top:10px;border-top:1px solid var(--rule);}
-.pill{font-size:12px;padding:4px 10px;border-radius:999px;background:var(--paper-2);color:var(--ink-muted);font-family:var(--font-sans);}
-.pill.rec{background:var(--ember-tint);color:var(--ember-deep);display:inline-flex;align-items:center;gap:5px;}
-.pill.rec::before{content:"";width:6px;height:6px;border-radius:999px;background:var(--ember);}
-.waveform{flex:1;display:flex;align-items:center;gap:2px;height:20px;}
-.waveform span{display:block;width:2px;background:var(--ink-muted);border-radius:2px;}
-</style>
-</head>
-<body>
-
-<header class="site-header" id="siteHeader">
-  <div class="container inner">
-    <a class="brand" href="index.html">Romain Saillet<span class="dot">.</span></a>
-    <nav class="site-nav">
-      <a href="index.html">Accueil</a>
-      <a href="storygami.html">Storygami</a>
-      <a href="gistit.html" class="active">Gist It</a>
-      <a href="videos.html">Vidéos</a>
-      <a href="tribunes.html">Tribunes</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Gist It — Romain Saillet"
+  description="Gist It : une app macOS pour transcrire vos réunions localement, sans cloud. 100% privé, optimisé Apple Silicon."
+  activeNav="gistit"
+>
 
   <section class="container hero">
     <div class="section-eyebrow">App macOS</div>
@@ -164,9 +125,7 @@
       <p style="font-family:var(--font-serif);font-size:17px;line-height:1.7;margin-top:24px;">
         Gist It ne collecte aucune donnée d'usage, aucune statistique anonyme, aucun
         identifiant. Il ne se connecte à internet que pour vérifier les mises à jour,
-        et uniquement quand vous le lui demandez. Les fichiers d'enregistrement
-        restent dans le dossier que vous avez choisi ; les supprimer suffit à les
-        faire disparaître.
+        et uniquement quand vous le lui demandez.
       </p>
       <p style="font-family:var(--font-serif);font-size:17px;line-height:1.7;">
         Gist It n'utilise pas de services tiers pour la transcription. Tous les modèles
@@ -181,27 +140,4 @@
     </div>
   </section>
 
-</main>
-
-<footer class="site-footer">
-  <div class="container inner">
-    <div>
-      <div class="brand" style="font-size:22px;">Romain Saillet<span class="dot">.</span></div>
-      <div class="blurb">Éditorial, enseignement, et un peu de code. Paris, à pied entre deux trains.</div>
-      <div class="copy">© 2026 · Romain Saillet</div>
-    </div>
-    <div class="links">
-      <a href="mailto:romain@romainsaillet.com">romain@romainsaillet.com</a>
-      <a href="#">YouTube ↗</a>
-      <a href="#">LinkedIn ↗</a>
-      <a href="#">RSS</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const h = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => h.classList.toggle('scrolled', window.scrollY > 8), {passive:true});
-</script>
-</body>
-</html>
+</Base>

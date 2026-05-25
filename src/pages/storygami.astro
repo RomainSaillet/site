@@ -1,29 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Storygami — Romain Saillet</title>
-<meta name="description" content="Storygami est la méthodologie de stratégie éditoriale que j'utilise depuis douze ans. Un canvas, six plis, pour structurer un récit de marque sans le rigidifier.">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="site-header" id="siteHeader">
-  <div class="container inner">
-    <a class="brand" href="index.html">Romain Saillet<span class="dot">.</span></a>
-    <nav class="site-nav">
-      <a href="index.html">Accueil</a>
-      <a href="storygami.html" class="active">Storygami</a>
-      <a href="gistit.html">Gist It</a>
-      <a href="videos.html">Vidéos</a>
-      <a href="tribunes.html">Tribunes</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Storygami — Romain Saillet"
+  description="Storygami est la méthodologie de stratégie éditoriale que j'utilise depuis douze ans. Un canvas, six plis, pour structurer un récit de marque sans le rigidifier."
+  activeNav="storygami"
+>
 
   <section class="container canvas-hero">
     <div>
@@ -36,7 +18,7 @@
       </p>
       <div class="actions">
         <a class="btn btn-primary" href="#canvas">Voir le canvas →</a>
-        <a class="btn btn-secondary" href="contact.html">M'écrire pour un atelier</a>
+        <a class="btn btn-secondary" href="/contact">M'écrire pour un atelier</a>
       </div>
     </div>
     <div class="canvas-visual">
@@ -131,31 +113,8 @@
       <cite>Storygami — chapitre IV</cite>
     </blockquote>
     <div style="margin-top:32px;">
-      <a class="btn btn-ember" href="contact.html">Parlons d'un atelier Storygami →</a>
+      <a class="btn btn-ember" href="/contact">Parlons d'un atelier Storygami →</a>
     </div>
   </section>
 
-</main>
-
-<footer class="site-footer">
-  <div class="container inner">
-    <div>
-      <div class="brand" style="font-size:22px;">Romain Saillet<span class="dot">.</span></div>
-      <div class="blurb">Éditorial, enseignement, et un peu de code. Paris, à pied entre deux trains.</div>
-      <div class="copy">© 2026 · Romain Saillet</div>
-    </div>
-    <div class="links">
-      <a href="mailto:romain@romainsaillet.com">romain@romainsaillet.com</a>
-      <a href="#">YouTube ↗</a>
-      <a href="#">LinkedIn ↗</a>
-      <a href="#">RSS</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  const h = document.getElementById('siteHeader');
-  window.addEventListener('scroll', () => h.classList.toggle('scrolled', window.scrollY > 8), {passive:true});
-</script>
-</body>
-</html>
+</Base>
