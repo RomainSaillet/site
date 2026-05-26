@@ -23,17 +23,17 @@ const { title, description = "Expert en création éditoriale et nouveaux média
 
 <header class="site-header" id="siteHeader">
   <div class="container inner">
-    <a class="brand" href="/">Romain Saillet<span class="dot">.</span></a>
-    <nav class="site-nav">
+    <nav class="site-nav-pill">
+      <a class="brand-pill-link" href="/">Romain Saillet<span class="dot">.</span></a>
+      <span class="nav-pill-sep" aria-hidden="true"></span>
       <a href="/" class={activeNav === 'accueil' ? 'active' : undefined}>Accueil</a>
       <a href="/offre" class={activeNav === 'offre' ? 'active' : undefined}>Offres</a>
       <a href="/storygami" class={activeNav === 'storygami' ? 'active' : undefined}>Storygami</a>
       <a href="/gistit" class={activeNav === 'gistit' ? 'active' : undefined}>Gist It</a>
       <a href="/blog" class={activeNav === 'blog' ? 'active' : undefined}>Blog</a>
+      <a href="/contact" class={`nav-contact-in-pill${activeNav === 'contact' ? ' active' : ''}`}>Contact</a>
     </nav>
-    <div class="header-right">
-      <a href="/contact" class={`nav-contact-btn${activeNav === 'contact' ? ' active' : ''}`}>Contact</a>
-      <button class="theme-toggle" id="themeToggle" aria-label="Basculer le mode sombre" title="Mode sombre">
+    <button class="theme-toggle" id="themeToggle" aria-label="Basculer le mode sombre" title="Mode sombre">
       <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
       </svg>
@@ -41,7 +41,6 @@ const { title, description = "Expert en création éditoriale et nouveaux média
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
       </svg>
     </button>
-    </div>
   </div>
 </header>
 
