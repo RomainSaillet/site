@@ -10,7 +10,7 @@ import Base from '../layouts/Base.astro';
   <!-- ═══ HERO ═══ -->
   <section class="hero-fs">
 
-    <div class="hero-bg"></div>
+    <div class="hero-bg" id="heroBg"></div>
 
     <div class="hero-body container">
       <div class="hero-text">
@@ -98,7 +98,7 @@ import Base from '../layouts/Base.astro';
       <div>
         <div class="ac-meta">Tribune<span class="sep"></span>8 min<span class="sep"></span>septembre 2025</div>
         <h3 class="ac-title">Les nouveaux médias n'existent pas. Il n'y a que de nouveaux récits.</h3>
-        <p class="ac-dek">Le mot « nouveau » est usé jusqu'à la corde. Ce qui change vraiment, ce n'est pas le canal ; c'est la manière dont l'histoire trouve son lecteur.</p>
+        <p class="ac-dek">Le mot « nouveau » est usé jusqu'à la corde. Ce qui change vraiment, ce n'est pas le canal.</p>
       </div>
     </a>
     <a class="article-card" href="/blog/enseigner-editorial-chatgpt">
@@ -122,46 +122,70 @@ import Base from '../layouts/Base.astro';
 </Base>
 
 <style>
-  /* ── HERO ── */
+  /* ══════════════════════════════════
+     HERO — variables CSS par thème
+  ══════════════════════════════════ */
+
+  /* Mode sombre (défaut) */
+  .hero-fs {
+    --hero-base-start : #1c0f0a;
+    --hero-base-end   : #0c0806;
+    --hero-orb-color  : rgba(170, 80, 50, 0.60);
+    --hero-orb-mid    : rgba(100, 38, 20, 0.30);
+    --hero-glow-color : rgba(210, 115, 65, 0.18);
+    --hero-text       : #ffffff;
+    --hero-text-dim   : rgba(255,255,255,0.50);
+    --hero-cta-bg     : rgba(255,255,255,0.10);
+    --hero-cta-border : rgba(255,255,255,0.22);
+    --hero-cta-hover  : rgba(255,255,255,0.18);
+  }
+
+  /* Mode clair */
+  :global([data-theme="light"]) .hero-fs {
+    --hero-base-start : #fdf6ee;
+    --hero-base-end   : #f5ece0;
+    --hero-orb-color  : rgba(200, 130, 70, 0.35);
+    --hero-orb-mid    : rgba(180, 100, 50, 0.15);
+    --hero-glow-color : rgba(220, 155, 90, 0.20);
+    --hero-text       : #1a0f0a;
+    --hero-text-dim   : rgba(26, 15, 10, 0.45);
+    --hero-cta-bg     : rgba(26, 15, 10, 0.07);
+    --hero-cta-border : rgba(26, 15, 10, 0.18);
+    --hero-cta-hover  : rgba(26, 15, 10, 0.13);
+  }
+
+  /* ── Structure ── */
   .hero-fs {
     position: relative;
     height: 100vh;
     min-height: 620px;
     overflow: hidden;
-    color: #fff;
   }
 
-  /* Fond dégradé radial brun-bordeaux */
+  /* ── Fond réactif à la souris via CSS custom props ── */
   .hero-bg {
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 50% 65%,
-        rgba(160, 80, 55, 0.55) 0%,
-        rgba(90, 35, 22, 0.35) 35%,
-        transparent 70%
+      radial-gradient(
+        ellipse 70% 55% at var(--hx, 50%) var(--hy, 62%),
+        var(--hero-orb-color) 0%,
+        var(--hero-orb-mid)   38%,
+        transparent           70%
       ),
-      linear-gradient(170deg, #1a0f0a 0%, #0e0806 50%, #12090a 100%);
+      radial-gradient(
+        ellipse 40% 30% at var(--hx, 50%) var(--hy, 62%),
+        var(--hero-glow-color) 0%,
+        transparent 100%
+      ),
+      linear-gradient(160deg,
+        var(--hero-base-start) 0%,
+        var(--hero-base-end)   100%
+      );
+    transition: background 0.4s ease;
   }
 
-  /* Halo lumineux subtil au centre */
-  .hero-bg::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 58%;
-    transform: translate(-50%, -50%);
-    width: 55vw;
-    height: 35vw;
-    background: radial-gradient(ellipse,
-      rgba(200, 110, 70, 0.18) 0%,
-      transparent 70%
-    );
-    border-radius: 50%;
-    filter: blur(40px);
-  }
-
-  /* Contenu textuel */
+  /* ── Texte ── */
   .hero-body {
     position: absolute;
     inset: 0;
@@ -178,7 +202,7 @@ import Base from '../layouts/Base.astro';
     font-size: 12px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
+    color: var(--hero-text-dim);
     margin-bottom: 24px;
   }
   .hero-title {
@@ -186,15 +210,15 @@ import Base from '../layouts/Base.astro';
     font-weight: 700;
     line-height: 1.1;
     letter-spacing: -0.025em;
-    color: #fff;
+    color: var(--hero-text);
     margin-bottom: 40px;
   }
   .hero-cta {
     display: inline-block;
     padding: 13px 28px;
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.25);
-    color: #fff;
+    background: var(--hero-cta-bg);
+    border: 1px solid var(--hero-cta-border);
+    color: var(--hero-text);
     font-weight: 500;
     font-size: 14px;
     border-radius: 4px;
@@ -203,11 +227,10 @@ import Base from '../layouts/Base.astro';
     transition: background 0.2s, border-color 0.2s;
   }
   .hero-cta:hover {
-    background: rgba(255,255,255,0.2);
-    border-color: rgba(255,255,255,0.4);
+    background: var(--hero-cta-hover);
   }
 
-  /* Liens sociaux — bas gauche */
+  /* ── Liens sociaux — bas gauche ── */
   .hero-socials {
     position: absolute;
     bottom: 44px;
@@ -220,16 +243,16 @@ import Base from '../layouts/Base.astro';
     display: flex;
     align-items: center;
     gap: 8px;
-    color: rgba(255,255,255,0.55);
+    color: var(--hero-text-dim);
     text-decoration: none;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.04em;
     transition: color 0.2s;
   }
-  .hero-socials a:hover { color: rgba(255,255,255,0.9); }
+  .hero-socials a:hover { color: var(--hero-text); }
 
-  /* Badge TEDx — droite verticale */
+  /* ── Badge TEDx — droite ── */
   .hero-badge {
     position: absolute;
     top: 50%;
@@ -239,17 +262,17 @@ import Base from '../layouts/Base.astro';
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
+    color: var(--hero-text-dim);
     white-space: nowrap;
   }
 
-  /* Flèche scroll — bas centre */
+  /* ── Flèche scroll — bas centre ── */
   .hero-scroll {
     position: absolute;
     bottom: 28px;
     left: 50%;
     transform: translateX(-50%);
-    color: rgba(255,255,255,0.35);
+    color: var(--hero-text-dim);
     text-decoration: none;
     animation: bounce 2.4s ease-in-out infinite;
   }
@@ -258,11 +281,38 @@ import Base from '../layouts/Base.astro';
     50%       { transform: translateX(-50%) translateY(8px); }
   }
 
-  /* Mobile */
+  /* ── Mobile ── */
   @media (max-width: 640px) {
-    .hero-socials { display: none; }
-    .hero-badge   { display: none; }
-    .hero-title   { font-size: 1.9rem; }
+    .hero-socials, .hero-badge { display: none; }
+    .hero-title { font-size: 1.9rem; }
   }
 </style>
+
+<script>
+  /* Suivi de la souris — lerp fluide sur le fond */
+  const bg = document.getElementById("heroBg");
+  if (bg) {
+    let tx = 50, ty = 62;   // position cible
+    let cx = 50, cy = 62;   // position courante (lissée)
+    const EASE = 0.06;       // 0 = aucun mouvement, 1 = instantané
+
+    document.addEventListener("mousemove", (e) => {
+      tx = (e.clientX / window.innerWidth)  * 100;
+      ty = (e.clientY / window.innerHeight) * 100;
+    });
+
+    /* Retour au centre quand la souris quitte la fenêtre */
+    document.addEventListener("mouseleave", () => {
+      tx = 50; ty = 62;
+    });
+
+    (function animate() {
+      cx += (tx - cx) * EASE;
+      cy += (ty - cy) * EASE;
+      bg.style.setProperty("--hx", cx.toFixed(2) + "%");
+      bg.style.setProperty("--hy", cy.toFixed(2) + "%");
+      requestAnimationFrame(animate);
+    })();
+  }
+</script>
 
