@@ -16,12 +16,8 @@ import Base from '../layouts/Base.astro';
       <div class="hero-text">
         <p class="hero-eyebrow">Romain Saillet · Paris</p>
         <h1 class="hero-title">
-          Des histoires mémorables pour
-          <span class="hero-rotating-line">
-            <span class="hero-rotating-wrap">
-              <span class="hero-rotating-text" id="heroRotating">engager vos audiences</span>
-            </span><span class="hero-dot">.</span>
-          </span>
+          Des histoires mémorables pour<br>
+          <span class="hero-rotating-wrap"><span class="hero-rotating-text" id="heroRotating">engager vos audiences</span></span><span class="hero-dot">.</span>
         </h1>
         <a href="/contact" class="hero-cta">Me contacter →</a>
       </div>
@@ -306,31 +302,28 @@ import Base from '../layouts/Base.astro';
   /* ── Texte rotatif ── */
 
   /* Couleur accent selon le thème */
-  .hero-fs { --hero-accent: #C96848; } /* ember — fonctionne dark & light */
+  .hero-fs { --hero-accent: #C96848; }
 
-  /* Ligne qui contient le texte rotatif + le point */
-  .hero-rotating-line {
-    display: block;
-  }
-
-  /* Fenêtre de clip — seule la hauteur d'une ligne est visible */
+  /* Fenêtre de clip — inline-block = largeur = longueur du texte courant */
   .hero-rotating-wrap {
     display: inline-block;
     overflow: hidden;
-    height: 1.15em;
+    height: 1.12em;
     vertical-align: bottom;
+    /* Transition douce sur la largeur quand la phrase change */
+    transition: width 0.4s cubic-bezier(0.2, 0, 0, 1);
   }
 
   .hero-rotating-text {
     display: block;
+    white-space: nowrap;   /* jamais de retour à la ligne — longueur = largeur du wrap */
     color: var(--hero-accent);
   }
 
-  /* Point final en couleur charte, toujours visible */
+  /* Point : inline, colle au wrap, suit sa largeur naturellement */
   .hero-dot {
     display: inline;
     vertical-align: bottom;
-    line-height: 1.15em;
     color: var(--hero-accent);
     font-weight: 700;
   }
@@ -416,6 +409,7 @@ import Base from '../layouts/Base.astro';
     })();
   }
 </script>
+
 
 
 
