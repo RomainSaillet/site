@@ -201,6 +201,19 @@ a:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; bor
 .brand .dot { color: var(--ember); }
 .brand:hover { color: var(--ink); text-decoration-color: transparent; }
 
+/* ── Brand pill (header seulement) ── */
+.site-header .brand {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(26, 15, 10, 0.07);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(26, 15, 10, 0.09);
+  border-radius: 9999px;
+  padding: 8px 16px;
+  justify-self: start;
+}
+
 /* ── Nav pill ── */
 .site-nav {
   display: flex;
@@ -664,8 +677,12 @@ a.offre-card:hover .offre-card-title { color: var(--ember); }
 [data-theme="dark"] .site-nav a:hover  { background: rgba(255,255,255,0.10); color: #fff; }
 [data-theme="dark"] .site-nav a.active { background: rgba(255,255,255,0.13); color: #fff; }
 
-/* Brand lisible sur fond sombre */
+/* Brand pill en mode sombre */
 [data-theme="dark"] .brand { color: var(--ink); }
+[data-theme="dark"] .site-header .brand {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.11);
+}
 
 /* Sélection de texte */
 [data-theme="dark"] ::selection {
@@ -729,4 +746,5 @@ a.offre-card:hover .offre-card-title { color: var(--ember); }
 .nav-contact-btn:hover,
 .nav-contact-btn:visited { color: #fff; text-decoration: none; }
 .nav-contact-btn:hover { background: var(--ember-deep); }
+
 
