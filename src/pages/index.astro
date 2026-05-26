@@ -16,8 +16,11 @@ import Base from '../layouts/Base.astro';
       <div class="hero-text">
         <p class="hero-eyebrow">Romain Saillet · Paris</p>
         <h1 class="hero-title">
-          Des histoires mémorables pour<br>
-          <span class="hero-rotating-wrap"><span class="hero-rotating-text" id="heroRotating">engager vos audiences</span></span><span class="hero-dot">.</span>
+          Des histoires mémorables pour
+          <span class="hero-rotating-container">
+            <span class="hero-rotating-wrap"><span class="hero-rotating-text" id="heroRotating">engager vos audiences</span></span>
+            <span class="hero-dot" id="heroDot">.</span>
+          </span>
         </h1>
         <a href="/contact" class="hero-cta">Me contacter →</a>
       </div>
@@ -304,28 +307,36 @@ import Base from '../layouts/Base.astro';
   /* Couleur accent selon le thème */
   .hero-fs { --hero-accent: #C96848; }
 
-  /* Fenêtre de clip — inline-block = largeur = longueur du texte courant */
+  /* Conteneur de la ligne rotative — référence pour le point absolu */
+  .hero-rotating-container {
+    display: block;
+    position: relative;
+    height: 1.15em;  /* hauteur = une ligne, évite le saut de layout */
+  }
+
+  /* Fenêtre de clip du texte animé */
   .hero-rotating-wrap {
     display: inline-block;
     overflow: hidden;
     height: 1.12em;
     vertical-align: bottom;
-    /* Transition douce sur la largeur quand la phrase change */
-    transition: width 0.4s cubic-bezier(0.2, 0, 0, 1);
   }
 
   .hero-rotating-text {
     display: block;
-    white-space: nowrap;   /* jamais de retour à la ligne — longueur = largeur du wrap */
+    white-space: nowrap;
     color: var(--hero-accent);
   }
 
-  /* Point : inline, colle au wrap, suit sa largeur naturellement */
+  /* Point absolu — glisse via `left` animé en JS */
   .hero-dot {
-    display: inline;
-    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
+    left: 0;           /* valeur initiale, mise à jour par JS */
     color: var(--hero-accent);
     font-weight: 700;
+    transition: left 0.45s cubic-bezier(0.2, 0, 0, 1);
+    pointer-events: none;
   }
 
   .hero-rotating-text.is-entering {
@@ -353,7 +364,7 @@ import Base from '../layouts/Base.astro';
 </style>
 
 <script>
-  /* ── Texte rotatif ── */
+  /* ── Texte rotatif + point glissant ── */
   const phrases = [
     "engager vos audiences",
     "développer votre marque",
@@ -364,12 +375,23 @@ import Base from '../layouts/Base.astro';
   ];
   let phraseIndex = 0;
   const rotEl = document.getElementById("heroRotating");
+  const dotEl = document.getElementById("heroDot");
+  const wrapEl = document.querySelector(".hero-rotating-wrap");
+
+  /* Place le point juste après le wrap, sans animation au premier render */
+  function moveDot(animate) {
+    if (!dotEl || !wrapEl) return;
+    if (!animate) dotEl.style.transition = "none";
+    dotEl.style.left = wrapEl.offsetWidth + "px";
+    if (!animate) requestAnimationFrame(() => { dotEl.style.transition = ""; });
+  }
 
   if (rotEl) {
     rotEl.classList.add("is-entering");
+    /* Position initiale sans transition */
+    requestAnimationFrame(() => moveDot(false));
 
     setInterval(() => {
-      // Sortie
       rotEl.classList.remove("is-entering");
       rotEl.classList.add("is-leaving");
 
@@ -378,9 +400,11 @@ import Base from '../layouts/Base.astro';
         rotEl.textContent = phrases[phraseIndex];
         rotEl.classList.remove("is-leaving");
         rotEl.classList.add("is-entering");
-      }, 380); // durée de rotateOut
+        /* Glisse le point vers la nouvelle position, en même temps que le texte entre */
+        requestAnimationFrame(() => moveDot(true));
+      }, 380);
 
-    }, 2500); // 2s visible + 0.5s transition
+    }, 2500);
   }
 
   /* Suivi de la souris — lerp fluide sur le fond */
@@ -409,6 +433,7 @@ import Base from '../layouts/Base.astro';
     })();
   }
 </script>
+
 
 
 
