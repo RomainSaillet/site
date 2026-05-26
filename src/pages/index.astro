@@ -15,7 +15,12 @@ import Base from '../layouts/Base.astro';
     <div class="hero-body container">
       <div class="hero-text">
         <p class="hero-eyebrow">Romain Saillet · Paris</p>
-        <h1 class="hero-title">Je raconte des histoires,<br>et je regarde la technologie<br>les transformer.</h1>
+        <h1 class="hero-title">
+          Des histoires mémorables pour
+          <span class="hero-rotating-wrap">
+            <span class="hero-rotating-text" id="heroRotating">engager vos audiences</span>
+          </span>
+        </h1>
         <a href="/contact" class="hero-cta">Me contacter →</a>
       </div>
     </div>
@@ -296,14 +301,80 @@ import Base from '../layouts/Base.astro';
     50%       { transform: translateX(-50%) translateY(8px); }
   }
 
+  /* ── Texte rotatif ── */
+  .hero-rotating-wrap {
+    display: block;
+    overflow: hidden;
+    /* hauteur fixe = 1 ligne, évite le saut de layout */
+    height: 1.15em;
+    margin-top: 0.05em;
+  }
+
+  .hero-rotating-text {
+    display: block;
+    color: var(--hero-accent);
+    font-style: italic;
+  }
+
+  /* Couleur accent selon le thème */
+  .hero-fs          { --hero-accent: rgba(255, 200, 160, 0.95); } /* crème chaud en dark */
+  :global([data-theme="light"]) .hero-fs { --hero-accent: #8E3F25; } /* ember-deep en light */
+
+  .hero-rotating-text.is-entering {
+    animation: rotateIn 0.45s cubic-bezier(0.2, 0, 0, 1) forwards;
+  }
+  .hero-rotating-text.is-leaving {
+    animation: rotateOut 0.35s cubic-bezier(0.4, 0, 1, 1) forwards;
+  }
+
+  @keyframes rotateIn {
+    from { transform: translateY(110%); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+  }
+  @keyframes rotateOut {
+    from { transform: translateY(0);     opacity: 1; }
+    to   { transform: translateY(-110%); opacity: 0; }
+  }
+
   /* ── Mobile ── */
   @media (max-width: 640px) {
     .hero-socials, .hero-badge { display: none; }
     .hero-title { font-size: 1.9rem; }
+    .hero-rotating-wrap { height: 1.2em; }
   }
 </style>
 
 <script>
+  /* ── Texte rotatif ── */
+  const phrases = [
+    "engager vos audiences",
+    "développer votre marque",
+    "trouver vos clients",
+    "embaucher les meilleurs talents",
+    "inspirer vos équipes",
+    "convaincre vos investisseurs",
+  ];
+  let phraseIndex = 0;
+  const rotEl = document.getElementById("heroRotating");
+
+  if (rotEl) {
+    rotEl.classList.add("is-entering");
+
+    setInterval(() => {
+      // Sortie
+      rotEl.classList.remove("is-entering");
+      rotEl.classList.add("is-leaving");
+
+      setTimeout(() => {
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        rotEl.textContent = phrases[phraseIndex];
+        rotEl.classList.remove("is-leaving");
+        rotEl.classList.add("is-entering");
+      }, 380); // durée de rotateOut
+
+    }, 2500); // 2s visible + 0.5s transition
+  }
+
   /* Suivi de la souris — lerp fluide sur le fond */
   const bg = document.getElementById("heroBg");
   if (bg) {
@@ -330,5 +401,6 @@ import Base from '../layouts/Base.astro';
     })();
   }
 </script>
+
 
 
