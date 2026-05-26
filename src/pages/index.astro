@@ -1,5 +1,28 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const slides = [
+  {
+    img: 'https://images.pexels.com/photos/15189552/pexels-photo-15189552.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080',
+    caption: 'Atelier de stratégie éditoriale'
+  },
+  {
+    img: 'https://images.pexels.com/photos/7693107/pexels-photo-7693107.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080',
+    caption: 'Conseil en planification de contenu'
+  },
+  {
+    img: 'https://images.pexels.com/photos/4344114/pexels-photo-4344114.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080',
+    caption: 'Direction éditoriale en équipe'
+  },
+  {
+    img: 'https://images.pexels.com/photos/5686105/pexels-photo-5686105.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080',
+    caption: 'Workshop Storygami'
+  },
+  {
+    img: 'https://images.pexels.com/photos/7097/people-coffee-tea-meeting.jpg?auto=compress&cs=tinysrgb&w=1920&h=1080',
+    caption: 'Conseil éditorial — Mantu'
+  },
+];
 ---
 <Base
   title="Romain Saillet — Éditorial, enseignement, et un peu de code."
@@ -7,35 +30,56 @@ import Base from '../layouts/Base.astro';
   activeNav="accueil"
 >
 
-  <section class="container hero-mag">
-    <div>
-      <div class="section-eyebrow" style="margin-bottom:14px;">Romain Saillet · Paris</div>
-      <h1>Je raconte des histoires, et je regarde la technologie les transformer.</h1>
-      <p class="standfirst">
-        Expert en création éditoriale et nouveaux médias. Ex-fondateur de Story Tailor,
-        Directeur Conseil Éditorial chez Mantu, enseignant à Paris Panthéon-Assas.
-        Problem solver avant tout.
-      </p>
-      <div class="actions">
-        <a class="btn btn-primary" href="/storygami">Découvrir Storygami →</a>
-        <a class="btn btn-ghost" href="/blog">Lire le blog</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="mono">
-        Identité<br>
-        ──────<br>
-        Objectif<br>
-        ──────<br>
-        Audience<br>
-        ──────<br>
-        Contenus<br>
-        ──────<br>
-        Résultats
-      </div>
-    </div>
-  </section>
+  <!-- ═══ HERO PLEIN ÉCRAN ═══ -->
+  <section class="hero-fs">
 
+    <div class="hero-slides" id="heroSlides">
+      {slides.map((s, i) => (
+        <div
+          class:list={['hero-slide', { 'is-active': i === 0 }]}
+          style={`background-image:url('${s.img}')`}
+          data-caption={s.caption}
+        />
+      ))}
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-body container">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Romain Saillet · Paris</p>
+        <h1 class="hero-title">Je raconte des histoires,<br>et je regarde la technologie<br>les transformer.</h1>
+        <a href="/contact" class="hero-cta">Me contacter →</a>
+      </div>
+    </div>
+
+    <nav class="hero-socials">
+      <a href="https://www.linkedin.com/in/romainsaillet/" target="_blank" rel="noopener">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        LinkedIn
+      </a>
+      <a href="mailto:romain@storytailor.fr">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        Email
+      </a>
+      <a href="https://youtube.com" target="_blank" rel="noopener">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
+        YouTube
+      </a>
+    </nav>
+
+    <div class="hero-badge">TEDx Speaker</div>
+
+    <div class="hero-caption" id="heroCaption">{slides[0].caption}</div>
+
+    <a href="#hero-end" class="hero-scroll" aria-label="Défiler vers le contenu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+    </a>
+
+  </section>
+  <div id="hero-end"></div>
+
+  <!-- ═══ CE QUE JE FAIS ═══ -->
   <section class="container section">
     <div class="section-head">
       <div>
@@ -56,10 +100,10 @@ import Base from '../layouts/Base.astro';
         <p class="pc-dek">Une petite app macOS pour transcrire ce qu'on entend. Pensée pour les journalistes, les chercheurs et les paresseux méthodiques.</p>
         <span class="pc-foot">Découvrir l'app →</span>
       </a>
-
     </div>
   </section>
 
+  <!-- ═══ CHIFFRE ÉDITORIAL ═══ -->
   <section class="container editorial-statement">
     <div class="grid">
       <div class="num">12<small>années à raconter</small></div>
@@ -67,6 +111,7 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
+  <!-- ═══ DERNIERS ARTICLES ═══ -->
   <section class="container section" style="border-top:none;padding-top:0;">
     <div class="section-head">
       <div>
@@ -104,6 +149,7 @@ import Base from '../layouts/Base.astro';
     </a>
   </section>
 
+  <!-- ═══ CITATION ═══ -->
   <section class="container section">
     <blockquote class="pullquote" style="max-width:32rem;">
       « Une marque qui n'a plus rien à raconter n'a plus rien à vendre. C'est aussi vrai d'une personne. »
@@ -112,3 +158,171 @@ import Base from '../layouts/Base.astro';
   </section>
 
 </Base>
+
+<style>
+  /* ── HERO FULLSCREEN ── */
+  .hero-fs {
+    position: relative;
+    height: 100vh;
+    min-height: 620px;
+    overflow: hidden;
+    color: #fff;
+  }
+
+  /* Diaporama */
+  .hero-slides { position: absolute; inset: 0; }
+  .hero-slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.4s ease;
+  }
+  .hero-slide.is-active { opacity: 1; }
+
+  /* Dégradé overlay */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.30) 0%,
+      rgba(0,0,0,0.10) 35%,
+      rgba(0,0,0,0.60) 100%
+    );
+  }
+
+  /* Contenu textuel */
+  .hero-body {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+  }
+  .hero-text {
+    max-width: 600px;
+    padding-top: 72px;
+  }
+  .hero-eyebrow {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 18px;
+  }
+  .hero-title {
+    font-size: clamp(1.9rem, 4.5vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: #fff;
+    margin-bottom: 36px;
+  }
+  .hero-cta {
+    display: inline-block;
+    padding: 13px 26px;
+    background: #fff;
+    color: #111;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .hero-cta:hover { opacity: 0.88; }
+
+  /* Liens sociaux — bas gauche */
+  .hero-socials {
+    position: absolute;
+    bottom: 44px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .hero-socials a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: color 0.2s;
+  }
+  .hero-socials a:hover { color: #fff; }
+
+  /* Badge TEDx — droite verticale */
+  .hero-badge {
+    position: absolute;
+    top: 50%;
+    right: -22px;
+    transform: translateY(-50%) rotate(90deg);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    background: rgba(0,0,0,0.35);
+    padding: 8px 20px;
+    border-radius: 4px 4px 0 0;
+    white-space: nowrap;
+    backdrop-filter: blur(6px);
+  }
+
+  /* Caption — bas droite */
+  .hero-caption {
+    position: absolute;
+    bottom: 44px;
+    right: 64px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+    font-style: italic;
+    transition: opacity 0.8s;
+  }
+
+  /* Flèche scroll — bas centre */
+  .hero-scroll {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    animation: bounce 2.2s ease-in-out infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(7px); }
+  }
+
+  /* Mobile */
+  @media (max-width: 640px) {
+    .hero-socials { left: 20px; bottom: 80px; }
+    .hero-caption { display: none; }
+    .hero-badge { display: none; }
+    .hero-title { font-size: 1.75rem; }
+  }
+</style>
+
+<script>
+  const slides  = Array.from(document.querySelectorAll('#heroSlides .hero-slide'));
+  const caption = document.getElementById('heroCaption');
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('is-active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('is-active');
+    if (caption) {
+      caption.style.opacity = '0';
+      setTimeout(() => {
+        caption.textContent = slides[current].dataset.caption;
+        caption.style.opacity = '1';
+      }, 400);
+    }
+  }, 5000);
+</script>
+
