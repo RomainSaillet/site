@@ -17,8 +17,10 @@ import Base from '../layouts/Base.astro';
         <p class="hero-eyebrow">Romain Saillet · Paris</p>
         <h1 class="hero-title">
           Des histoires mémorables pour
-          <span class="hero-rotating-wrap">
-            <span class="hero-rotating-text" id="heroRotating">engager vos audiences</span>
+          <span class="hero-rotating-line">
+            <span class="hero-rotating-wrap">
+              <span class="hero-rotating-text" id="heroRotating">engager vos audiences</span>
+            </span><span class="hero-dot">.</span>
           </span>
         </h1>
         <a href="/contact" class="hero-cta">Me contacter →</a>
@@ -211,12 +213,12 @@ import Base from '../layouts/Base.astro';
     inset: 0;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
   }
   .hero-text {
-    max-width: 780px;
+    max-width: 680px;
     padding-top: 60px;
+    text-align: left;
   }
   .hero-eyebrow {
     font-size: 12px;
@@ -302,23 +304,36 @@ import Base from '../layouts/Base.astro';
   }
 
   /* ── Texte rotatif ── */
-  .hero-rotating-wrap {
+
+  /* Couleur accent selon le thème */
+  .hero-fs { --hero-accent: #C96848; } /* ember — fonctionne dark & light */
+
+  /* Ligne qui contient le texte rotatif + le point */
+  .hero-rotating-line {
     display: block;
+  }
+
+  /* Fenêtre de clip — seule la hauteur d'une ligne est visible */
+  .hero-rotating-wrap {
+    display: inline-block;
     overflow: hidden;
-    /* hauteur fixe = 1 ligne, évite le saut de layout */
     height: 1.15em;
-    margin-top: 0.05em;
+    vertical-align: bottom;
   }
 
   .hero-rotating-text {
     display: block;
     color: var(--hero-accent);
-    font-style: italic;
   }
 
-  /* Couleur accent selon le thème */
-  .hero-fs          { --hero-accent: rgba(255, 200, 160, 0.95); } /* crème chaud en dark */
-  :global([data-theme="light"]) .hero-fs { --hero-accent: #8E3F25; } /* ember-deep en light */
+  /* Point final en couleur charte, toujours visible */
+  .hero-dot {
+    display: inline;
+    vertical-align: bottom;
+    line-height: 1.15em;
+    color: var(--hero-accent);
+    font-weight: 700;
+  }
 
   .hero-rotating-text.is-entering {
     animation: rotateIn 0.45s cubic-bezier(0.2, 0, 0, 1) forwards;
