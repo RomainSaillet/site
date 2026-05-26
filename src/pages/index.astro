@@ -129,7 +129,7 @@ import Base from '../layouts/Base.astro';
   /* Mode sombre (défaut) */
   .hero-fs {
     --hero-base-start : #1c0f0a;
-    --hero-base-end   : #0c0806;
+    --hero-base-end   : #18160F; /* = --paper dark, assure la continuité */
     --hero-orb-color  : rgba(170, 80, 50, 0.60);
     --hero-orb-mid    : rgba(100, 38, 20, 0.30);
     --hero-glow-color : rgba(210, 115, 65, 0.18);
@@ -160,6 +160,21 @@ import Base from '../layouts/Base.astro';
     height: 100vh;
     min-height: 620px;
     overflow: hidden;
+  }
+
+  /* Fondu bas vers la couleur de page — seamless en dark & light */
+  .hero-fs::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    background: linear-gradient(to bottom,
+      transparent,
+      var(--hero-base-end)
+    );
+    pointer-events: none;
   }
 
   /* ── Fond réactif à la souris via CSS custom props ── */
@@ -315,4 +330,5 @@ import Base from '../layouts/Base.astro';
     })();
   }
 </script>
+
 
