@@ -27,7 +27,6 @@ import Base from '../layouts/Base.astro';
     </div>
 
 
-    <div class="hero-badge">TEDx Speaker</div>
 
     <a href="#hero-end" class="hero-scroll" aria-label="Défiler vers le contenu">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
@@ -239,18 +238,6 @@ import Base from '../layouts/Base.astro';
 
 
   /* ── Badge TEDx — droite ── */
-  .hero-badge {
-    position: absolute;
-    top: 50%;
-    right: -22px;
-    transform: translateY(-50%) rotate(90deg);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--hero-text-dim);
-    white-space: nowrap;
-  }
 
   /* ── Flèche scroll — bas centre ── */
   .hero-scroll {
@@ -322,7 +309,6 @@ import Base from '../layouts/Base.astro';
 
   /* ── Mobile ── */
   @media (max-width: 640px) {
-    .hero-badge { display: none; }
     .hero-title { font-size: 1.9rem; }
     .hero-rotating-wrap { height: 1.2em; }
   }
@@ -398,6 +384,7 @@ import Base from '../layouts/Base.astro';
     })();
   }
 </script>
+
 
 
 
