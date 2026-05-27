@@ -26,20 +26,6 @@ import Base from '../layouts/Base.astro';
       </div>
     </div>
 
-    <nav class="hero-socials">
-      <a href="https://www.linkedin.com/in/romainsaillet/" target="_blank" rel="noopener">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        LinkedIn
-      </a>
-      <a href="mailto:romain@storytailor.fr">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        Email
-      </a>
-      <a href="https://youtube.com" target="_blank" rel="noopener">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
-        YouTube
-      </a>
-    </nav>
 
     <div class="hero-badge">TEDx Speaker</div>
 
@@ -251,27 +237,6 @@ import Base from '../layouts/Base.astro';
     background: var(--hero-cta-hover);
   }
 
-  /* ── Liens sociaux — bas gauche ── */
-  .hero-socials {
-    position: absolute;
-    bottom: 44px;
-    left: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .hero-socials a {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--hero-text-dim);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    transition: color 0.2s;
-  }
-  .hero-socials a:hover { color: var(--hero-text); }
 
   /* ── Badge TEDx — droite ── */
   .hero-badge {
@@ -357,7 +322,7 @@ import Base from '../layouts/Base.astro';
 
   /* ── Mobile ── */
   @media (max-width: 640px) {
-    .hero-socials, .hero-badge { display: none; }
+    .hero-badge { display: none; }
     .hero-title { font-size: 1.9rem; }
     .hero-rotating-wrap { height: 1.2em; }
   }
@@ -433,6 +398,7 @@ import Base from '../layouts/Base.astro';
     })();
   }
 </script>
+
 
 
 
