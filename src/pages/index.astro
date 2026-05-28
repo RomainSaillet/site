@@ -83,33 +83,33 @@ import Base from '../layouts/Base.astro';
       </div>
       <a class="section-link" href="/offre">Toutes les offres →</a>
     </div>
-    <div class="offres-home-grid">
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:var(--space-6);">
 
-      <a class="offre-home-card" href="/offre#strategie">
-        <div class="ohc-num">01</div>
-        <div class="ohc-body">
+      <a class="ohc" href="/offre#strategie">
+        <div class="ohc-top">
+          <span class="ohc-num">01</span>
           <h3 class="ohc-title">Stratégie</h3>
-          <p class="ohc-dek">Poser les fondations. Comprendre pourquoi, pour qui et avec quelle voix — avant de produire quoi que ce soit.</p>
-          <span class="ohc-link">Workshop Storygami · Stratégie éditoriale →</span>
         </div>
+        <p class="ohc-dek">Votre message existe, mais il manque de cohérence ou de cap. On pose les fondations avant de produire quoi que ce soit.</p>
+        <span class="ohc-cta">Voir les offres →</span>
       </a>
 
-      <a class="offre-home-card" href="/offre#tactique">
-        <div class="ohc-num">02</div>
-        <div class="ohc-body">
+      <a class="ohc" href="/offre#tactique">
+        <div class="ohc-top">
+          <span class="ohc-num">02</span>
           <h3 class="ohc-title">Tactique</h3>
-          <p class="ohc-dek">Mettre en mouvement. Concevoir les dispositifs qui transforment une stratégie en production régulière et mesurable.</p>
-          <span class="ohc-link">Content Factory · GEO →</span>
         </div>
+        <p class="ohc-dek">Vous avez une stratégie, mais elle ne se traduit pas en contenus réguliers. On construit les dispositifs qui font tourner la machine.</p>
+        <span class="ohc-cta">Voir les offres →</span>
       </a>
 
-      <a class="offre-home-card" href="/offre#production">
-        <div class="ohc-num">03</div>
-        <div class="ohc-body">
+      <a class="ohc" href="/offre#production">
+        <div class="ohc-top">
+          <span class="ohc-num">03</span>
           <h3 class="ohc-title">Production</h3>
-          <p class="ohc-dek">Passer à l'air. Créer des formats qui durent, se répètent, et construisent une audience dans la durée.</p>
-          <span class="ohc-link">Podcast interne · Webinaire →</span>
         </div>
+        <p class="ohc-dek">Vous voulez des formats qui parlent, qui durent et qui construisent une audience — sans tout faire en interne.</p>
+        <span class="ohc-cta">Voir les offres →</span>
       </a>
 
     </div>
@@ -365,60 +365,48 @@ import Base from '../layouts/Base.astro';
 
   /* ── Section offres home ── */
   .section-offres { border-top: 1px solid var(--rule); padding: var(--space-9) 0; }
-  .offres-home-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    border: 1px solid var(--rule);
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: var(--space-6);
-  }
-  .offre-home-card {
+  .ohc {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 36px 32px;
-    background: var(--paper);
+    gap: 16px;
+    padding: 32px 28px;
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
     text-decoration: none;
-    transition: background 0.2s;
-    border-right: 1px solid var(--rule);
+    transition: border-color 0.2s, background 0.2s;
   }
-  .offre-home-card:last-child { border-right: none; }
-  .offre-home-card:hover { background: var(--paper-2); }
+  .ohc:hover { border-color: var(--ember); background: var(--paper); }
+  .ohc-top { display: flex; align-items: baseline; gap: 14px; }
   .ohc-num {
     font-family: var(--font-serif);
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--ember);
     line-height: 1;
     letter-spacing: -0.03em;
+    flex-shrink: 0;
   }
   .ohc-title {
     font-family: var(--font-serif);
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--ink);
-    margin-bottom: 10px;
+    margin: 0;
   }
   .ohc-dek {
     font-size: 14px;
-    line-height: 1.65;
+    line-height: 1.7;
     color: var(--ink-muted);
     flex: 1;
+    margin: 0;
   }
-  .ohc-link {
+  .ohc-cta {
     font-size: 13px;
     font-family: var(--font-sans);
     font-weight: 500;
     color: var(--ember);
-    margin-top: auto;
-    display: block;
-  }
-  @media (max-width: 768px) {
-    .offres-home-grid { grid-template-columns: 1fr; }
-    .offre-home-card { border-right: none; border-bottom: 1px solid var(--rule); }
-    .offre-home-card:last-child { border-bottom: none; }
+    margin-top: 4px;
   }
 
   /* ── Section about ── */
