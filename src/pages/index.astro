@@ -38,16 +38,6 @@ import Base from '../layouts/Base.astro';
   <!-- ═══ À PROPOS ═══ -->
   <section class="container section-about">
     <div class="about-inner">
-      <div class="about-photo-wrap">
-        <img
-          src="/romain-saillet.jpg"
-          alt="Romain Saillet"
-          class="about-photo"
-          width="420"
-          height="560"
-        />
-        <p class="about-credit">© Quentin Chevrier</p>
-      </div>
       <div class="about-text">
         <div class="section-eyebrow">À propos</div>
         <h2 class="about-title">Romain Saillet</h2>
@@ -61,6 +51,16 @@ import Base from '../layouts/Base.astro';
           leurs audiences et atteindre leurs objectifs.
         </p>
         <a href="/contact" class="about-cta">Me contacter →</a>
+      </div>
+      <div class="about-photo-wrap">
+        <img
+          src="/romain-saillet.jpg"
+          alt="Romain Saillet"
+          class="about-photo"
+          width="420"
+          height="560"
+        />
+        <p class="about-credit">© Quentin Chevrier</p>
       </div>
     </div>
   </section>
@@ -257,7 +257,7 @@ import Base from '../layouts/Base.astro';
     color: var(--hero-text);
     font-weight: 500;
     font-size: 14px;
-    border-radius: 4px;
+    border-radius: 20px;
     text-decoration: none;
     backdrop-filter: blur(8px);
     transition: background 0.2s, border-color 0.2s;
@@ -368,7 +368,7 @@ import Base from '../layouts/Base.astro';
   .about-photo {
     width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 20px;
     display: block;
     object-fit: cover;
     aspect-ratio: 3/4;
@@ -405,7 +405,7 @@ import Base from '../layouts/Base.astro';
     font-family: var(--font-sans);
     font-size: 14px;
     font-weight: 500;
-    border-radius: 4px;
+    border-radius: 20px;
     text-decoration: none;
     transition: background 0.2s;
   }
