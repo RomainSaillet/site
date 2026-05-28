@@ -328,8 +328,8 @@ import Base from '../layouts/Base.astro';
   }
   .about-inner {
     display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 72px;
+    grid-template-columns: 1fr 320px;
+    gap: 64px;
     align-items: center;
   }
   .about-photo-wrap {
@@ -337,10 +337,11 @@ import Base from '../layouts/Base.astro';
   }
   .about-photo {
     width: 100%;
-    height: auto;
+    max-height: 420px;
     border-radius: 20px;
     display: block;
     object-fit: cover;
+    object-position: center top;
     aspect-ratio: 3/4;
   }
   .about-credit {
