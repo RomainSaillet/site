@@ -728,6 +728,14 @@ a.offre-card:hover .offre-card-title { color: var(--ember); }
   background: linear-gradient(135deg, #2A2520, #3A3028);
 }
 
+
+/* Boutons en mode sombre */
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-primary:visited { color: var(--paper); }
+[data-theme="dark"] .btn-primary:hover   { background: #F0EDE5; color: var(--paper); }
+[data-theme="dark"] .btn-secondary,
+[data-theme="dark"] .btn-secondary:visited { background: var(--paper-2); border-color: var(--rule-strong); }
+
 /* Bouton toggle ─────────────────────────────────────────────── */
 .theme-toggle {
   grid-column: 3;
@@ -753,6 +761,7 @@ a.offre-card:hover .offre-card-title { color: var(--ember); }
 /* Affichage conditionnel des icônes */
 :root:not([data-theme="dark"]) .icon-moon { display: none; }
 [data-theme="dark"] .icon-sun  { display: none; }
+
 
 
 
