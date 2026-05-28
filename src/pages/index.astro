@@ -35,6 +35,36 @@ import Base from '../layouts/Base.astro';
   </section>
   <div id="hero-end"></div>
 
+  <!-- ═══ À PROPOS ═══ -->
+  <section class="container section-about">
+    <div class="about-inner">
+      <div class="about-photo-wrap">
+        <img
+          src="/romain-saillet.jpg"
+          alt="Romain Saillet"
+          class="about-photo"
+          width="420"
+          height="560"
+        />
+        <p class="about-credit">© Quentin Chevrier</p>
+      </div>
+      <div class="about-text">
+        <div class="section-eyebrow">À propos</div>
+        <h2 class="about-title">Romain Saillet</h2>
+        <p class="about-body">
+          Après avoir dirigé mon agence de communication éditoriale Story Tailor,
+          j'ai rejoint Mantu en tant que Directeur Conseil Éditorial.
+        </p>
+        <p class="about-body">
+          Passionné par les nouvelles narrations, j'accompagne depuis 15 ans des marques,
+          des dirigeants et des collaborateurs à mettre en forme leurs récits pour engager
+          leurs audiences et atteindre leurs objectifs.
+        </p>
+        <a href="/contact" class="about-cta">Me contacter →</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ CE QUE JE FAIS ═══ -->
   <section class="container section">
     <div class="section-head">
@@ -320,6 +350,66 @@ import Base from '../layouts/Base.astro';
     from { transform: translateY(0);     opacity: 1; }
     to   { transform: translateY(-110%); opacity: 0; }
   }
+
+  /* ── Section about ── */
+  .section-about {
+    padding: var(--space-9) 0;
+    border-top: 1px solid var(--rule);
+  }
+  .about-inner {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 72px;
+    align-items: center;
+  }
+  .about-photo-wrap {
+    position: relative;
+  }
+  .about-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 3/4;
+  }
+  .about-credit {
+    margin-top: 8px;
+    font-size: 11px;
+    color: var(--ink-faint);
+    font-family: var(--font-sans);
+    letter-spacing: 0.04em;
+    text-align: right;
+  }
+  .about-title {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin: 12px 0 28px;
+  }
+  .about-body {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-muted);
+    margin-bottom: 20px;
+    max-width: 480px;
+  }
+  .about-cta {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 11px 24px;
+    background: var(--ink);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+  .about-cta:hover { background: #2A2722; }
 
   /* ── Mobile ── */
   @media (max-width: 640px) {
