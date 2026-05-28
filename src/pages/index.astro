@@ -245,9 +245,23 @@ import Base from '../layouts/Base.astro';
     bottom: 28px;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--hero-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: var(--hero-cta-bg);
+    border: 1px solid var(--hero-cta-border);
+    border-radius: 50%;
+    color: var(--hero-text);
     text-decoration: none;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     animation: bounce 2.4s ease-in-out infinite;
+    transition: background 0.2s, border-color 0.2s;
+  }
+  .hero-scroll:hover {
+    background: var(--hero-cta-hover);
   }
   @keyframes bounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
@@ -382,6 +396,16 @@ import Base from '../layouts/Base.astro';
       bg.style.setProperty("--hy", cy.toFixed(2) + "%");
       requestAnimationFrame(animate);
     })();
+  }
+
+  /* Smooth scroll sur la flèche hero */
+  const scrollBtn = document.querySelector('.hero-scroll');
+  if (scrollBtn) {
+    scrollBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.getElementById('hero-end');
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   }
 </script>
 
