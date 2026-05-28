@@ -187,11 +187,13 @@ a:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; bor
 }
 .site-header.scrolled { /* conservé pour JS */ }
 .site-header .inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
   align-items: center;
-  justify-content: center;
   gap: 8px;
 }
+.site-nav-pill  { grid-column: 2; }
+.theme-toggle   { grid-column: 3; }
 
 /* ── Brand (footer) ── */
 .brand {
