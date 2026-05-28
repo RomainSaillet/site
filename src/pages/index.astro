@@ -481,6 +481,16 @@ import Base from '../layouts/Base.astro';
   }
   .about-cta:hover { background: #2A2722; }
 
+  /* Mode sombre : texte lisible sur fond crème */
+  :global([data-theme="dark"]) .about-cta {
+    background: #EDE8DF;
+    color: #1C0F0A;
+  }
+  :global([data-theme="dark"]) .about-cta:hover {
+    background: #F5F2EC;
+    color: #1C0F0A;
+  }
+
   /* ── Mobile ── */
   @media (max-width: 640px) {
     .hero-title { font-size: 1.9rem; }
