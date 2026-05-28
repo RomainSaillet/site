@@ -189,13 +189,7 @@ a:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 3px; bor
 .site-header .inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-/* Nav pill + toggle groupés à droite */
-.site-nav-right {
-  display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -744,6 +738,7 @@ a.offre-card:hover .offre-card-title { color: var(--ember); }
 
 /* Bouton toggle ─────────────────────────────────────────────── */
 .theme-toggle {
+  flex-shrink: 0;
   width: 32px; height: 32px;
   border-radius: 50%;
   border: 1px solid var(--rule-strong);
