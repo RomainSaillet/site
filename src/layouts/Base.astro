@@ -15,9 +15,16 @@ const { title, description = "Expert en création éditoriale et nouveaux média
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 {description && <meta name="description" content={description} />}
-<script>
-  (function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();
+<script is:inline>
+  (function(){
+    var t = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
 </script>
+<style>
+  html[data-theme="dark"], html:not([data-theme]) { background: #1C0F0A; }
+  html[data-theme="light"] { background: #F7F4EE; }
+</style>
 </head>
 <body>
 
