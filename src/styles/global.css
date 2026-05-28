@@ -708,6 +708,10 @@ a.offre-card:hover .offre-card-title { color: var(--ember); }
   background: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.11);
 }
+[data-theme="dark"] .theme-toggle {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.11);
+}
 [data-theme="dark"] .site-nav-pill a:not(.brand-pill-link):not(.nav-contact-in-pill):hover  { background: rgba(255,255,255,0.10); color: #fff; }
 [data-theme="dark"] .site-nav-pill a:not(.brand-pill-link):not(.nav-contact-in-pill).active { background: rgba(255,255,255,0.13); color: #fff; }
 [data-theme="dark"] .brand-pill-link { color: var(--ink); }
@@ -744,8 +748,10 @@ a.offre-card:hover .offre-card-title { color: var(--ember); }
   aspect-ratio: 1;
   width: auto; height: auto;
   border-radius: 50%;
-  border: 1px solid var(--rule-strong);
-  background: transparent;
+  border: 1px solid rgba(26, 15, 10, 0.09);
+  background: rgba(26, 15, 10, 0.07);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   color: var(--ink-muted);
   cursor: pointer;
   display: flex; align-items: center; justify-content: center;
