@@ -369,6 +369,64 @@ import Base from '../layouts/Base.astro';
     to   { transform: translateY(-110%); opacity: 0; }
   }
 
+  /* ── Section offres home ── */
+  .section-offres { border-top: 1px solid var(--rule); padding: var(--space-9) 0; }
+  .offres-home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: var(--space-6);
+  }
+  .offre-home-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 36px 32px;
+    background: var(--paper);
+    text-decoration: none;
+    transition: background 0.2s;
+    border-right: 1px solid var(--rule);
+  }
+  .offre-home-card:last-child { border-right: none; }
+  .offre-home-card:hover { background: var(--paper-2); }
+  .ohc-num {
+    font-family: var(--font-serif);
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--ember);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .ohc-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+  .ohc-dek {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--ink-muted);
+    flex: 1;
+  }
+  .ohc-link {
+    font-size: 13px;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    color: var(--ember);
+    margin-top: auto;
+    display: block;
+  }
+  @media (max-width: 768px) {
+    .offres-home-grid { grid-template-columns: 1fr; }
+    .offre-home-card { border-right: none; border-bottom: 1px solid var(--rule); }
+    .offre-home-card:last-child { border-bottom: none; }
+  }
+
   /* ── Section about ── */
   .section-about {
     padding: var(--space-9) 0;
