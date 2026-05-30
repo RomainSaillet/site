@@ -10,9 +10,6 @@ cover: "teach"
 
 Je suis fan de Casey Neistat. Je dois le confesser. À chaque notification d’une nouvelle vidéo, j’arrêtais tout pour regarder ce petit moment de respiration. J’ai même eu la chance de le rencontrer à New York il y a quelques années.
 
-[
-
-](https://substackcdn.com/image/fetch/$s_!tzYu!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7d58ccc7-4893-4daf-85d4-828948aa3d0d_886x886.jpeg)
 Pour ceux qui ne le connaissent pas, Casey Neistat est l’une de ces figures emblématiques qui a révolutionné le storytelling sur YouTube. Cinéaste innovant et narrateur hors pair, il a su créer une connexion profonde avec son audience en partageant son quotidien avec authenticité et créativité. 
 
 Il y a quelques jours, Casey (beaucoup moins présent sur les réseaux depuis l’arrêt de ses vlogs) revient sur sa carrière, et sur les grandes leçons qu’il a apprises pour raconter des histoires engageantes.
