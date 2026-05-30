@@ -28,18 +28,13 @@ Amy Edmondson, de Harvard, appelle ça "l'humilité compétente". C'est comme un
 Voici quelques phrases que vous pouvez garder sous le coude (testées et approuvées par les pros de la communication) :
 
 - Au lieu de : "Je ne sais pas" (point final) Essayez : "C'est une excellente question. Je veux être certain de vous donner une réponse précise, donc je vais vérifier avec mon équipe et je reviens vers vous."
-
 - Au lieu de : Inventer une réponse approximative Essayez : "Ce que je peux vous dire avec certitude, c'est X. Pour le reste, nous sommes en train d'explorer plusieurs pistes..."
-
 - Au lieu de : Esquiver la question Essayez : "C'est un sujet complexe qui mérite qu'on y consacre du temps. Voici comment nous allons l'aborder..."
 
 ### **L'art de douter intelligemment : quelques règles d'or**
 - Soyez transparent sur ce que vous savez ET ce que vous ne savez pas
-
 - Expliquez comment vous allez chercher les réponses
-
 - Impliquez les autres dans la recherche de solutions
-
 - Restez humble mais confiant
 
 ### **Pour conclure : et si on changeait les règles du jeu ?**
