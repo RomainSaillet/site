@@ -25,6 +25,57 @@ const { title, description = "Expert en création éditoriale et nouveaux média
   html[data-theme="dark"], html:not([data-theme]) { background: #1C0F0A; }
   html[data-theme="light"] { background: #F7F4EE; }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://romainsaillet.com/#person",
+      "name": "Romain Saillet",
+      "url": "https://romainsaillet.com",
+      "email": "romain@romainsaillet.com",
+      "jobTitle": "Expert en création éditoriale et nouveaux médias",
+      "description": "Fondateur de Story Tailor, Directeur Conseil Éditorial chez Mantu, enseignant à Paris Panthéon-Assas. Quinze ans d'accompagnement de marques et de dirigeants dans la structuration de leur récit.",
+      "knowsAbout": [
+        "Stratégie éditoriale",
+        "Storytelling de marque",
+        "Nouveaux médias",
+        "Intelligence artificielle et récit",
+        "Formation éditoriale",
+        "Contenu de marque"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Mantu",
+        "url": "https://www.mantu.com"
+      },
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "Story Tailor"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Paris",
+        "addressCountry": "FR"
+      },
+      "sameAs": [
+        "https://romainsaillet.fr",
+        "https://saillet.co"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://romainsaillet.com/#website",
+      "name": "Romain Saillet",
+      "url": "https://romainsaillet.com",
+      "description": "Éditorial, enseignement et un peu de code. Storygami, Gist It, tribunes et conférences.",
+      "inLanguage": "fr-FR",
+      "author": { "@id": "https://romainsaillet.com/#person" }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
