@@ -1,6 +1,6 @@
 ---
 title: "NewStory #13 : Pantone transforme 2025 en année gourmande"
-description: "En cette fin d'année 2024, Pantone dévoile sa couleur pour 2025 : le Mocha Mousse. Cette teinte brune évoque la douceur d'un café au lait ou d'une mou…"
+description: "En cette fin d'année 2024, Pantone dévoile sa couleur pour 2025 : le Mocha Mousse. Cette teinte brune évoque la douceur d'un café au lait ou d'une mou..."
 date: 2024-12-11
 readTime: "3 min"
 category: "Newsletter"
@@ -15,17 +15,11 @@ Mais qu’est ce que Pantone ? Tout commence en 1866 dans le New Jersey, avec un
 
 Son idée révolutionnaire ? Attribuer à chaque couleur une formule précise et un code unique. Cette standardisation permet enfin aux professionnels de parler le même langage, de Paris à Tokyo. Le succès est immédiat. Le nuancier Pantone, qui compte aujourd'hui plus de 2100 couleurs, devient la référence mondiale.
 
-[
-
-](https://substackcdn.com/image/fetch/$s_!bvXV!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F6de6c662-6a89-4dba-be16-535a1b120e94_612x612.webp)
 ## Dans les secrets de la couleur de l'année
 Le choix de la couleur de l'année n'est pas le fruit du hasard. Deux fois par an, Pantone réunit secrètement des experts internationaux dans une capitale européenne. Pendant deux jours, ils analysent les tendances sociales, les innovations technologiques et les influences culturelles.
 
 Pour 2025, le Mocha Mousse symbolise notre quête d'harmonie. Comme l'explique Laurie Pressman, vice-présidente du Pantone Color Institute : "L'harmonie inspire un état de paix intérieure et permet d'être à l'écoute du monde qui nous entoure."
 
-[
-
-](https://substackcdn.com/image/fetch/$s_!TFOK!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fad488b02-0d2d-44e7-a898-a93549ea68d8_696x348.jpeg)
 ## Un modèle économique ingénieux
 Pantone a bâti un empire en réussissant un tour de force : monétiser quelque chose d'aussi intangible que la couleur. Tout commence avec une astuce commerciale brillante : la vente de nuanciers professionnels qu'il faut renouveler chaque année car les teintes jaunissent avec le temps, créant ainsi un revenu récurrent. Mais le véritable coup de génie survient dans les années 80, quand l'entreprise anticipe la révolution numérique en développant des partenariats stratégiques avec les géants du logiciel comme Adobe, Hewlett-Packard et Microsoft.
 
@@ -33,9 +27,6 @@ Pantone a bâti un empire en réussissant un tour de force : monétiser quelque 
 
 En 2000, l'entreprise franchit une nouvelle étape avec le lancement de "Pantone Universe" : les codes couleur deviennent des objets lifestyle grand public, des tasses aux vêtements en passant par le mobilier. La marque multiplie ensuite les collaborations prestigieuses, comme une ligne de maquillage avec Sephora ou des collections de peinture avec de grands fabricants. Cette stratégie de diversification culmine en 2007 avec le rachat de l'entreprise par X-Rite pour 180 millions de dollars, confirmant la transformation réussie d'une entreprise familiale en leader mondial de la colorimétrie.
 
-[
-
-](https://substackcdn.com/image/fetch/$s_!gxgC!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fd8a6128d-9d38-42dd-90ed-0a713954aa03_1000x1000.jpeg)
 ## L'influence culturelle
 En quelques décennies, Pantone a transcendé son rôle d'expert technique pour devenir un véritable phénomène culturel. L'annonce de la couleur de l'année est désormais un événement médiatique mondial qui dépasse largement le cercle des professionnels. Des magazines de mode aux réseaux sociaux, chaque nouvelle teinte génère débats et tendances. 
 
