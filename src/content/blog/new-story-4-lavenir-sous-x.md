@@ -17,13 +17,19 @@ Depuis qu’Elon Musk a racheté Twitter en octobre 2022, la plateforme a connu 
 
 Malgré ces défis, X a annoncé une utilisation record lors de la journée électorale américaine de 2024, avec 417 milliards de secondes-utilisateurs cumulées, soit une augmentation de 23 % par rapport au précédent record. Cependant, certaines analyses suggèrent que ces chiffres pourraient ne pas refléter une augmentation significative de l’engagement global des utilisateurs.
 
+<img src="https://substack-post-media.s3.amazonaws.com/public/images/06a05d98-10c8-4676-91bb-3f70d1512771_1200x1565.jpeg" alt="" style="max-width:100%;height:auto;display:block;margin:1.5rem 0;" />
+
 ### **La revanche des outsiders : Bluesky**
 Face aux licenciement en masse à l’arrivée d’Elon Musk, de nouvelles plateformes ont émergé, offrant des alternatives aux utilisateurs en quête de nouvelles expériences. Bluesky, fondé par Jack Dorsey, cofondateur de Twitter, se positionne comme un réseau social décentralisé. Depuis son ouverture au grand public en février 2024, Bluesky a connu une croissance notable, atteignant 1,2 million d’utilisateurs actifs mensuels. En octobre 2024, la plateforme a levé 15 millions de dollars pour soutenir son développement et prévoit de lancer une offre payante pour diversifier ses revenus.
 
 Récemment, Bluesky a attiré l’attention des fans de Taylor Swift, connus sous le nom de “Swifties”. Suite à l’élection présidentielle américaine de 2024, de nombreux Swifties ont quitté X pour rejoindre Bluesky, en raison du soutien affiché d’Elon Musk à Donald Trump et de la montée de la rhétorique haineuse sur la plateforme. Cette migration illustre la recherche par les utilisateurs d’environnements en ligne plus sûrs et alignés sur leurs valeurs.
 
+<img src="https://substack-post-media.s3.amazonaws.com/public/images/e78c5c1b-3518-4215-bc66-728a4d86467c_1200x701.jpeg" alt="" style="max-width:100%;height:auto;display:block;margin:1.5rem 0;" />
+
 ### **Lancement remarqué de Particle**
 Parallèlement, toujours grâce à des anciens de Twitter, [Particle](https://particlenews.ai/) a récemment fait son apparition en tant qu’application d’actualités propulsée par l’intelligence artificielle. Contrairement à d’autres agrégateurs, Particle vise à collaborer avec les éditeurs plutôt qu’à simplement utiliser leurs contenus. L’application organise les articles en “Histoires” complètes et les résume à l’aide de listes à puces ou de divers “styles de résumé” personnalisables, offrant ainsi une vue d’ensemble des sujets complexes. Cette approche innovante pourrait redéfinir la manière dont les actualités sont consommées et partagées sur les plateformes numériques.
+
+<img src="https://substack-post-media.s3.amazonaws.com/public/images/7ad8c6d5-bf74-474e-afb2-18dc68cb796a_1200x628.jpeg" alt="" style="max-width:100%;height:auto;display:block;margin:1.5rem 0;" />
 
 ### **Conclusion**
 Bien que l’avenir de X soit incertain, les esprits créatifs à l’origine de sa création et de son développement continuent de proposer des alternatives et de nouveaux outils d’information. Il est essentiel de suivre de près ces initiatives, car elles pourraient redéfinir l’avenir de l’information et des médias.
