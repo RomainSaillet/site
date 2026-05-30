@@ -10,9 +10,6 @@ cover: "teach"
 
 Depuis toujours, les réseaux sociaux excellent dans l'art d'attirer et de fidéliser. Messages personnalisés, contenus engageants, connexions authentiques... ils ont tout pour séduire. Tout, sauf la capacité à convertir directement en ventes. C'est ce dernier bastion qu'attaque aujourd'hui TikTok avec TikTok Shop, un an après son lancement aux États-Unis. Entre ambitions démesurées et réalité du terrain, plongée dans la nouvelle frontière du commerce social.
 
-[
-
-](https://substackcdn.com/image/fetch/$s_!8uKT!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2cee4124-b440-4ec0-b81a-0040e01b7020_1800x762.jpeg)
 ### PARTIE 1 : LES CHIFFRES QUI FONT TOURNER LES TÊTES
 Commençons par ce qui impressionne : lors de la seule campagne "Rentrée des Classes", TikTok Shop a enregistré 6,3 millions de commandes. En cinq jours, la plateforme a vu défiler 482 000 vidéos promotionnelles et 76 000 lives shopping. Plus impressionnant encore : 292 000 personnes ont sorti leur carte bancaire. Un démarrage qui a propulsé TikTok Shop au rang de 16e e-commerçant américain en à peine un an d'existence.
 
@@ -20,9 +17,6 @@ Mais attendez avant d'ouvrir le champagne. ByteDance, la maison-mère de TikTok,
 
 Le succès britannique tempère néanmoins cette déception : en un an, 50% des utilisateurs TikTok au Royaume-Uni ont effectué au moins un achat sur TikTok Shop. Mieux encore, la plateforme s'est hissée au rang de 10e e-commerçant du pays. Une performance qui laisse entrevoir le potentiel réel de cette approche.
 
-[
-
-](https://substackcdn.com/image/fetch/$s_!i3zp!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0cc9b717-a3f2-4256-a50a-92c72ee677b4_1281x1318.png)
 ### PARTIE 2 : UN MODÈLE ÉCONOMIQUE QUI BOUSCULE LES CODES
 La force de TikTok Shop ? Avoir compris que le commerce social ne pouvait pas se contenter de reproduire les codes du e-commerce traditionnel. Exit donc le modèle centré sur les marques et leurs catalogues produits. Place aux créateurs de contenu, transformés en véritables vendeurs 2.0.
 
@@ -30,9 +24,6 @@ Cette approche "creator-first" bouleverse tous les codes établis. Les publicit�
 
 Mais cette révolution a un prix. Pour s'imposer, TikTok a massivement subventionné sa marketplace : livraison gratuite, commissions nulles, bons de réduction à gogo... Une stratégie qui rappelle les débuts d'Amazon, mais qui commence déjà à montrer ses limites. La commission est désormais passée à 8%, et la question de la rentabilité se pose de plus en plus ouvertement.
 
-[
-
-](https://substackcdn.com/image/fetch/$s_!UIgr!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F7e57e083-e882-409d-a37a-5a6165e33b56_800x601.jpeg)
 ### PARTIE 3 : LES GRANDS DÉFIS DE DEMAIN
 Le premier défi reste la conquête des grandes marques. Pour l'instant, TikTok Shop ressemble plus à Temu qu'à Amazon, avec une majorité de produits sans marque à bas prix, souvent expédiés directement de Chine. "La plupart des marques ne savent pas comment s'y prendre", explique Kaziukėnas. Un constat qui souligne le fossé culturel entre le marketing traditionnel et les codes de TikTok.
 
@@ -40,9 +31,6 @@ Le live shopping cristallise particulièrement cette difficulté. Véritable ph�
 
 L'intégration dans l'expérience utilisateur pose également question. Si TikTok excelle dans la découverte de produits et l'impulsion d'achat, la plateforme doit encore trouver le bon équilibre entre contenu et commerce. Trop de promotions risquent de lasser les utilisateurs, pas assez ne permettra pas d'atteindre les objectifs commerciaux.
 
-[
-
-](https://substackcdn.com/image/fetch/$s_!L_cG!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F5755ed58-5955-4039-a78f-b383cb789bfd_2560x1707.webp)
 ### LES APPRENTISSAGES À RETENIR
 Le commerce social n'est plus une option mais une nécessité. TikTok Shop, malgré ses défis, dessine les contours d'une nouvelle forme de commerce en ligne où l'engagement prime sur la transaction, où l'authenticité l'emporte sur le marketing traditionnel.
 
