@@ -50,11 +50,7 @@ La méthodologie d’Anna Binder pour construire la culture d’Asana montre que
 
 #### Pour aller plus loin : 
 - [Build Your Culture Like a Product — Lessons from Asana’s Head of People](https://review.firstround.com/build-your-culture-like-a-product-lessons-from-asanas-head-of-people/)
-
 - [Company Culture Statistics: Leadership and Engagement in 2024](https://teamstage.io/company-culture-statistics/)
-
 - [16+ Key Company Culture Statistics for 2024](https://moneyzine.com/careers/company-culture-statistics/)
-
 - [Insights to shape organization culture for success](https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-organization-blog/insights-to-shape-organization-culture-for-success)
-
 - [6 Workplace Culture Trends for 2024 Every Company Should Watch](https://www.greatplacetowork.com/resources/blog/6-workplace-culture-trends-for-2024-every-company-should-watch)
