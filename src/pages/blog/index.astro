@@ -1,28 +1,89 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { getSubstackPosts } from '../../lib/substack.js';
 
 const posts = await getCollection('blog');
 posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-const ALL_TAGS = ['Tribunes', 'Actualité', 'Vidéos'];
+const ALL_TAGS = ['Tribunes', 'Actualite', 'Videos'];
+
+const substackPosts = await getSubstackPosts('https://romainsaillet.substack.com/feed', 5);
 ---
 <Base
-  title="Blog — Romain Saillet"
-  description="Articles de fond sur l'éditorial, les médias et la transformation narrative par la technologie."
+  title="Blog - Romain Saillet"
+  description="Articles de fond sur l'editorial, les medias et la transformation narrative par la technologie."
   activeNav="blog"
 >
 
   <section class="container hero">
     <div class="section-eyebrow">Blog</div>
-    <h1 style="max-width:20ch;">Ce que j'écris quand je ne peux pas m'en empêcher.</h1>
+    <h1 style="max-width:20ch;">Ce que j'ecris quand je ne peux pas m'en empecher.</h1>
     <p class="standfirst">
-      Des articles de fond sur l'éditorial, les médias, et ce que la technologie
-      change à la façon dont on raconte et dont on reçoit les histoires.
-      Pas de calendrier éditorial. Seulement quand ça vaut le détour.
+      Des articles de fond sur l'editorial, les medias, et ce que la technologie
+      change a la facon dont on raconte et dont on recoit les histoires.
+      Pas de calendrier editorial. Seulement quand ca vaut le detour.
     </p>
   </section>
 
+  <!-- ===== MODULE NEWSLETTER ===== -->
+  <section class="container section" style="border-top:none;padding-top:0;">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">Newsletter</div>
+        <h2 class="section-title">La newsletter du recit</h2>
+        <p style="font-family:var(--font-serif);font-size:18px;line-height:1.6;color:var(--ink-muted);margin:12px 0 0;max-width:38rem;">
+          Chaque semaine, une lecture sur le recit, les medias et ce que la
+          technologie leur fait. Du concret, des cas, des prises de position.
+          Pas de calendrier impose : seulement quand ca vaut le detour.
+        </p>
+      </div>
+      <a class="btn btn-primary"
+         href="https://romainsaillet.substack.com"
+         target="_blank" rel="noopener noreferrer">
+        S'abonner
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== DERNIERES EDITIONS (RSS Substack) ===== -->
+  {substackPosts.length > 0 && (
+    <section class="container section">
+      <div class="section-head">
+        <div>
+          <div class="section-eyebrow">Newsletter</div>
+          <h2 class="section-title">Dernieres editions</h2>
+        </div>
+        <a class="section-link"
+           href="https://romainsaillet.substack.com"
+           target="_blank" rel="noopener noreferrer">
+          Toutes les editions ↗
+        </a>
+      </div>
+      {substackPosts.map(post => (
+        <a class="article-card"
+           href={post.link}
+           target="_blank" rel="noopener noreferrer">
+          <div
+            class={`ac-cover${post.image ? '' : ' storygami'}`}
+            style={post.image
+              ? `background-image:url('${post.image}');background-size:cover;background-position:center top;`
+              : undefined}
+            aria-hidden="true"
+          ></div>
+          <div>
+            <div class="ac-meta">
+              Newsletter<span class="sep"></span>{post.date}
+            </div>
+            <h3 class="ac-title">{post.title}</h3>
+            {post.description && <p class="ac-dek">{post.description}</p>}
+          </div>
+        </a>
+      ))}
+    </section>
+  )}
+
+  <!-- ===== ARCHIVE LOCALE (inchangee) ===== -->
   <section class="container section" style="border-top:none;padding-top:0;">
 
     <div class="tag-filter-bar">
