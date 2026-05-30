@@ -31,11 +31,48 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
+  <!-- ═══ CANVAS TÉLÉCHARGEABLE ═══ -->
   <section class="container section" id="canvas">
     <div class="section-head">
       <div>
         <div class="section-eyebrow">Le canvas</div>
-        <h2 class="section-title">Six plis, à parcourir dans n'importe quel ordre</h2>
+        <h2 class="section-title">Téléchargez le canvas Storygami</h2>
+      </div>
+    </div>
+
+    <!-- Prévisualisation -->
+    <div class="canvas-preview-wrap">
+      <img
+        src="/storygami-canvas.png"
+        alt="Canvas Storygami — six plis pour structurer un récit de marque"
+        class="canvas-preview-img"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Bloc téléchargement -->
+    <div class="canvas-dl-block">
+      <div class="canvas-dl-text">
+        <h3>Emportez-le avec vous.</h3>
+        <p>Le canvas en haute résolution, à imprimer en A3 ou à remplir directement sur tablette. Gratuit.</p>
+      </div>
+      <div class="canvas-dl-actions">
+        <a class="btn btn-primary" href="/storygami-canvas.png" download="storygami-canvas.png">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Télécharger le canvas
+        </a>
+        <div class="canvas-dl-sub">
+          Vous avez une question sur la méthode ? <a href="/contact">Écrivez-moi →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">Six plis</div>
+        <h2 class="section-title">À parcourir dans n'importe quel ordre</h2>
       </div>
     </div>
     <div class="pli-list">
@@ -118,3 +155,64 @@ import Base from '../layouts/Base.astro';
   </section>
 
 </Base>
+
+<style>
+  /* ── Canvas preview ── */
+  .canvas-preview-wrap {
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: var(--space-6);
+    box-shadow: var(--shadow-lift);
+  }
+  .canvas-preview-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ── Bloc téléchargement ── */
+  .canvas-dl-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    padding: var(--space-6);
+    background: var(--paper-2);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    flex-wrap: wrap;
+  }
+  .canvas-dl-text h3 {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+  .canvas-dl-text p {
+    font-family: var(--font-sans);
+    font-size: 15px;
+    color: var(--ink-muted);
+    margin: 0;
+    max-width: 36rem;
+  }
+  .canvas-dl-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .canvas-dl-sub {
+    font-family: var(--font-sans);
+    font-size: 13px;
+    color: var(--ink-muted);
+  }
+  .canvas-dl-sub a {
+    color: var(--ember);
+    text-decoration: none;
+  }
+  .canvas-dl-sub a:hover { text-decoration: underline; }
+</style>
