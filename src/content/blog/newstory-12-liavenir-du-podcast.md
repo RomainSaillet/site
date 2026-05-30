@@ -12,8 +12,12 @@ Dans cet épisode de NewStory, je voulais vous partagerune innovation majeure qu
 
 Le principe est d'une simplicité redoutable : vous importez des articles sur un sujet, et NotebookLM génère automatiquement un podcast professionnel avec deux présentateurs qui échangent de manière naturelle. Le réalisme est saisissant : intonations variées, hésitations placées intelligemment, dynamique conversationnelle fluide... La qualité est telle qu'il devient difficile de distinguer ces productions de podcasts traditionnels.
 
+<img src="https://substack-post-media.s3.amazonaws.com/public/images/e8800200-4aa9-45d6-9e87-6a43a44a90ef_1280x720.jpeg" alt="" style="max-width:100%;height:auto;display:block;margin:1.5rem 0;" />
+
 ## **Une expérience révélatrice**
 Le Tow Center vient de publier une étude particulièrement éclairante sur le potentiel de cet outil. En prenant comme sujet l'actualité de Matt Gaetz, les chercheurs ont réalisé une expérience édifiante en produisant quatre versions différentes du même podcast.
+
+<img src="https://substack-post-media.s3.amazonaws.com/public/images/6edab04c-abef-4ca1-9e76-143095610754_3000x2000.jpeg" alt="" style="max-width:100%;height:auto;display:block;margin:1.5rem 0;" />
 
 Les deux premières versions ont démontré comment le choix des sources influence radicalement le traitement de l'information. En utilisant uniquement des médias traditionnels (New York Times, Washington Post...), le podcast offrait une analyse équilibrée. À l'inverse, avec des sources conservatrices (Fox News, Breitbart...), le ton changeait considérablement.
 
