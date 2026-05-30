@@ -36,9 +36,10 @@ Google renforce sa plateforme avec de nouvelles fonctionnalités :
 - Filtres dynamiques
 - Personnalisation alimentée par l'IA
 - Intégration des données issues du "Holiday 100", liste des produits les plus recherchés
-
 ### Une concurrence qui s'intensifie
 L'arrivée de nouveaux acteurs comme Perplexity, qui propose désormais des fonctionnalités e-commerce avec des cartes produits interactives et un processus d'achat simplifié, illustre l'intensification de la concurrence dans ce secteur. Cette nouvelle plateforme se distingue notamment par son approche sans frais d'affiliation pour les vendeurs et ses recommandations présentées comme impartiales.
+
+<img src="https://substack-post-media.s3.amazonaws.com/public/images/f713d6a0-f292-4f59-8999-2f17b086d07c_1200x630.webp" alt="" style="max-width:100%;height:auto;display:block;margin:1.5rem 0;" />
 
 ## Perspectives
 Dans un marché e-commerce en constante évolution, Google Shopping se démarque par une approche qui mêle divertissement et technologie. La période des fêtes 2024 sera particulièrement intéressante pour évaluer l'impact de cette stratégie innovante qui transforme l'expérience shopping en véritable spectacle.
