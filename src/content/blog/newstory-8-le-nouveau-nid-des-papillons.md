@@ -15,6 +15,8 @@ Et quand on parle d'exode, on ne plaisante pas. Imaginez un peu : The Guardian e
 
 Mais ce n'est pas tout. Des pointures comme Stephen King (oui, LE Stephen King et ses 7 millions de fans) ont aussi mis les voiles. La journaliste Salomé Saqué, suivie par plus de 210 000 personnes, a elle aussi fait ses adieux à la plateforme. On assiste là à un mouvement sans précédent dans l'histoire des réseaux sociaux.
 
+<img src="https://substack-post-media.s3.amazonaws.com/public/images/5cee436e-e9af-4d2b-9027-d23005de5607_1186x906.png" alt="" style="max-width:100%;height:auto;display:block;margin:1.5rem 0;" />
+
 ### PARTIE 2 : POURQUOI UN TEL DIVORCE ?
 Alors, pourquoi ce désamour soudain ? C'est simple : pour la première fois, les médias ne quittent pas une plateforme parce qu'elle ne marche pas, mais parce qu'ils ne peuvent plus cautionner ce qu'elle est devenue.
 
@@ -22,10 +24,14 @@ Parlons franchement : quand Musk a viré 80% des modérateurs, ça a mis la puce
 
 Mais le vrai tournant, c'est quand X est devenu une sorte de mégaphone pro-Trump. Les théories du complot ont commencé à pulluler, l'extrême-droite s'est fait une place de choix... Et pour couronner le tout, la plateforme s'est mise à coller des étiquettes douteuses sur les médias publics. NPR étiquetée comme "média d'État" ? Autant dire que ça n'est pas très bien passé.
 
+<img src="https://substack-post-media.s3.amazonaws.com/public/images/de8f1275-a8ed-460c-ba26-e880bfd6482e_1920x1080.jpeg" alt="" style="max-width:100%;height:auto;display:block;margin:1.5rem 0;" />
+
 ### PARTIE 3 : LA VIE APRÈS X
 Mais ne vous inquiétez pas, la nature a horreur du vide. Et le moins qu'on puisse dire, c'est que Bluesky a su saisir sa chance. La plateforme, qui a démarré timidement en février 2023, vient de franchir la barre des 20 millions d'utilisateurs, avec un million de nouvelles inscriptions par jour depuis deux semaines. Une croissance fulgurante qui fait parler dans le petit monde de la tech.
 
 Derrière ce succès, une femme : Jay Graber. Cette Sino-Américaine de 33 ans, rare dirigeante dans l'univers très masculin de la Silicon Valley (où 89% des postes de pouvoir sont occupés par des hommes), incarne une vision radicalement différente des réseaux sociaux. Son histoire personnelle - sa mère a fui la Chine pendant la Révolution culturelle - n'est sans doute pas étrangère à sa vision de la liberté d'expression.
+
+<img src="https://substack-post-media.s3.amazonaws.com/public/images/8b0740cf-4407-47f4-b050-ca9a83bba65f_1024x576.jpeg" alt="" style="max-width:100%;height:auto;display:block;margin:1.5rem 0;" />
 
 Quand on sait que son prénom officiel, Lantian, signifie "ciel bleu" en mandarin, on ne peut s'empêcher d'y voir un clin d'œil du destin. Mais ce qui fait la différence, c'est surtout son approche : Bluesky est une "public benefit corporation", une entreprise qui vise le profit tout en se préoccupant de son impact sociétal. Son fonctionnement en open source permet à la technologie d'être accessible à tous et de s'améliorer grâce aux contributions des utilisateurs.
 
